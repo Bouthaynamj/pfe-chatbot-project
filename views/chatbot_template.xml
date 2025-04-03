@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="snippet_chatbot" name="Chatbot Snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <div class="o_panel_body">
+                <t t-snippet="website_custom_chatbot.s_chatbot"
+                   t-thumbnail="/website_custom_chatbot/static/src/img/chatbot_thumbnail.png"/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="s_chatbot" name="Chatbot">
+        <section class="s_chatbot">
+            <div class="container">
+                <div class="chatbot-container">
+                    <div class="chat-header">
+                        <span class="status">Craft-Chatbot</span>
+                    </div>
+                    <div class="chat-window">
+                        <div class="message">
+                            <div class="avatar bot-avatar">
+                                <img t-att-src="'/website_custom_chatbot/static/src/images/CraftChat_2-02.png'" alt="Bot Avatar"/>
+                            </div>
+                            <div class="message-content">
+                                <p>Hi, I can help with your ERP questions. How can I assist you today?</p>
+                                <div class="options"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <form class="chat-form">
+                            <input type="text" class="chat-query" placeholder="Ask a question"/>
+                            <button type="submit" class="submit-btn">
+                                <span class="submit-icon">→</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
