@@ -25,15 +25,7 @@
                             <button class="close-chatbot">×</button>
                         </div>
                         <div class="chat-window">
-                            <div class="message">
-                                <div class="avatar bot-avatar">
-                                    <img t-att-src="'/website_custom_chatbot/static/src/images/CraftChat_2-02.png'" alt="Bot Avatar"/>
-                                </div>
-                                <div class="message-content">
-                                    <p>Hi, I can help with your ERP questions. How can I assist you today?</p>
-                                    <div class="options"></div>
-                                </div>
-                            </div>
+                            <!-- Chat window starts empty; messages will be added dynamically -->
                         </div>
                         <div class="chat-input">
                             <form class="chat-form">
