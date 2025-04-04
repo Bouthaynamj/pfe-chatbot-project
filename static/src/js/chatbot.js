@@ -5,13 +5,16 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
     const rpc = require('web.rpc');
 
     publicWidget.registry.Chatbot = publicWidget.Widget.extend({
-        selector: '.s_chatbot',
+        selector: '.chatbot-wrapper',
         events: {
             'submit .chat-form': '_onSubmit',
             'click .option-button': '_onOptionClick',
+            'click .chatbot-toggle': '_toggleChatbot',
+            'click .close-chatbot': '_toggleChatbot',
         },
 
         start: function () {
+            this._welcomeMessageShown = false; // Track if the welcome message has been shown
             return this._super.apply(this, arguments).then(() => {
                 return this._setupChatbot();
             });
@@ -35,7 +38,6 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                     "CraftEd Workspace",
                     "CraftEd Universe"
                 ];
-                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
             });
         },
 
@@ -168,7 +170,20 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         _scrollToBottom: function () {
             const $chatWindow = this.$('.chat-window');
-            $chatWindow.scrollTop($chatWindow[0].scrollHeight);
+            $chatWindow.scrollTop($chatWindow.prop('scrollHeight'));
+        },
+
+        _toggleChatbot: function () {
+            const $chatbotContainer = this.$('.chatbot-container');
+            const isVisible = $chatbotContainer.hasClass('visible');
+
+            if (!isVisible && !this._welcomeMessageShown) {
+                // Add the welcome message only once
+                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
+                this._welcomeMessageShown = true;
+            }
+
+            $chatbotContainer.toggleClass('hidden visible');
         },
     });
 });
