@@ -17,8 +17,13 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         start: function () {
             this._welcomeMessageShown = false;
             this._chatHistoryKey = 'craftschoolship_chat_history';
+
             return this._super.apply(this, arguments).then(() => {
                 this.$('.hide-chatbot').on('click', this._hideChatbot.bind(this));
+
+                // Restore the chatbot state on page load
+                this._restoreChatbotState();
+
                 return this._setupChatbot();
             });
         },
@@ -266,11 +271,17 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             }
 
             $chatbotContainer.toggleClass('hidden visible');
+
+            // Save the chatbot state to localStorage
+            localStorage.setItem('chatbot_state', isVisible ? 'closed' : 'open');
         },
 
         _hideChatbot: function () {
             const $chatbotContainer = this.$('.chatbot-container');
             $chatbotContainer.addClass('hidden').removeClass('visible');
+
+            // Save the chatbot state to localStorage
+            localStorage.setItem('chatbot_state', 'closed');
         },
 
         _closeChatbot: function () {
@@ -282,6 +293,22 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             // Hide the chatbot
             const $chatbotContainer = this.$('.chatbot-container');
             $chatbotContainer.addClass('hidden').removeClass('visible');
+
+            // Save the chatbot state to localStorage
+            localStorage.setItem('chatbot_state', 'closed');
+        },
+
+        _restoreChatbotState: function () {
+            const state = localStorage.getItem('chatbot_state');
+            const $chatbotContainer = this.$('.chatbot-container');
+
+            if (state === 'open') {
+                // Directly set the visibility without triggering animations
+                $chatbotContainer.removeClass('hidden').addClass('visible').css('transition', 'none');
+            } else {
+                // Directly set the visibility without triggering animations
+                $chatbotContainer.addClass('hidden').removeClass('visible').css('transition', 'none');
+            }
         },
     });
 });
