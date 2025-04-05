@@ -1,4 +1,4 @@
-from odoo import http
+from odoo import http, _
 import json
 import os
 import logging
@@ -12,17 +12,16 @@ class ChatbotController(http.Controller):
         try:
             module_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             dataset_path = os.path.join(module_path, 'data', 'erp_dataset.json')
-            
-            _logger.info(f"Loading dataset from: {dataset_path}")
-            
+            _logger.info(_("Loading dataset from: %s") % dataset_path)
+
             if not os.path.exists(dataset_path):
-                _logger.error(f"Dataset file does not exist: {dataset_path}")
+                _logger.error(_("Dataset file does not exist: %s") % dataset_path)
                 return []
-                
+
             with open(dataset_path, 'r', encoding='utf-8') as file:
                 dataset = json.load(file)
-                
+
             return dataset
         except Exception as e:
-            _logger.error(f"Error loading dataset: {str(e)}")
+            _logger.error(_("Error loading dataset: %s") % str(e))
             return []

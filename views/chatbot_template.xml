@@ -4,7 +4,7 @@
         <xpath expr="//div[@id='snippet_structure']" position="inside">
             <div class="o_panel_body">
                 <t t-snippet="website_custom_chatbot.s_chatbot"
-                   t-thumbnail="/website_custom_chatbot/static/src/img/chatbot_thumbnail.png"/>
+                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"/>
             </div>
         </xpath>
     </template>
@@ -21,8 +21,12 @@
                     <!-- Chatbot Container -->
                     <div class="chatbot-container hidden">
                         <div class="chat-header">
-                            <span class="status">Craft-Chatbot</span>
-                            <button class="close-chatbot">×</button>
+                            <span>Chatbot</span>
+                            <div class="header-buttons">
+                                <!-- Removed the clear-chatbot button -->
+                                <button class="hide-chatbot">-</button>
+                                <button class="close-chatbot">×</button>
+                            </div>
                         </div>
                         <div class="chat-window">
                             <!-- Chat window starts empty; messages will be added dynamically -->
@@ -39,5 +43,15 @@
                 </div>
             </div>
         </section>
+    </template>
+
+    <template id="snippets_chatbot_options" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <div class="o_panel_body">
+                <t t-snippet="website_custom_chatbot.s_chatbot"
+                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"
+                   t-options="website_custom_chatbot.ChatbotOptions"/>
+            </div>
+        </xpath>
     </template>
 </odoo>

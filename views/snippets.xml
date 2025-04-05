@@ -4,7 +4,8 @@
         <xpath expr="//div[@id='snippet_structure']" position="inside">
             <div class="o_panel_body">
                 <t t-snippet="website_custom_chatbot.s_chatbot"
-                   t-thumbnail="/website_custom_chatbot/static/src/img/chatbot_thumbnail.png"/>
+                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"
+                   t-options="website_custom_chatbot.ChatbotOptions"/>
             </div>
         </xpath>
     </template>

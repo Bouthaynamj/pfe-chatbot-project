@@ -10,12 +10,15 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             'submit .chat-form': '_onSubmit',
             'click .option-button': '_onOptionClick',
             'click .chatbot-toggle': '_toggleChatbot',
-            'click .close-chatbot': '_toggleChatbot',
+            'click .close-chatbot': '_closeChatbot',
+            'click .clear-chatbot': '_clearConversation',
         },
 
         start: function () {
-            this._welcomeMessageShown = false; // Track if the welcome message has been shown
+            this._welcomeMessageShown = false;
+            this._chatHistoryKey = 'craftschoolship_chat_history';
             return this._super.apply(this, arguments).then(() => {
+                this.$('.hide-chatbot').on('click', this._hideChatbot.bind(this));
                 return this._setupChatbot();
             });
         },
@@ -38,6 +41,9 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                     "CraftEd Workspace",
                     "CraftEd Universe"
                 ];
+                
+                // Load conversation history from local storage
+                this._loadConversation();
             });
         },
 
@@ -48,6 +54,72 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                 console.error("Failed to load dataset.");
                 return [];
             });
+        },
+
+        _loadConversation: function () {
+            const savedData = localStorage.getItem(this._chatHistoryKey);
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                
+                // Clear if older than 24 hours
+                const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+                if (new Date().getTime() - data.timestamp > TWENTY_FOUR_HOURS) {
+                    this._clearConversation();
+                    return;
+                }
+                
+                const $chatWindow = this.$('.chat-window');
+                $chatWindow.html('');
+                
+                data.messages.forEach(msg => {
+                    if (msg.type === 'user') {
+                        this._addUserMessage(msg.content, true);
+                    } else {
+                        this._addBotMessage(msg.content, null, msg.options, true);
+                    }
+                });
+                
+                this._welcomeMessageShown = true;
+                this._scrollToBottom();
+            }
+        },
+
+        _saveConversation: function () {
+            const messages = [];
+            this.$('.chat-window .message').each((index, element) => {
+                const $element = $(element);
+                if ($element.hasClass('user-message')) {
+                    messages.push({
+                        type: 'user',
+                        content: $element.find('.message-content p').text()
+                    });
+                } else {
+                    const options = [];
+                    $element.find('.option-button').each((i, btn) => {
+                        options.push($(btn).data('topic'));
+                    });
+                    
+                    messages.push({
+                        type: 'bot',
+                        content: $element.find('.message-content p').text(),
+                        options: options.length > 0 ? options : null
+                    });
+                }
+            });
+            
+            const conversationData = {
+                messages: messages,
+                timestamp: new Date().getTime()
+            };
+            
+            localStorage.setItem(this._chatHistoryKey, JSON.stringify(conversationData));
+        },
+
+        _clearConversation: function () {
+            localStorage.removeItem(this._chatHistoryKey);
+            this.$('.chat-window').empty();
+            this._welcomeMessageShown = false;
+            this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
         },
 
         _onSubmit: function (ev) {
@@ -71,20 +143,23 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             } else {
                 this._addBotMessage("Sorry, I don't understand your question. Here are some topics you can ask about:", null, this.mainTopics);
             }
+            
+            this._saveConversation();
         },
 
         _onOptionClick: function (ev) {
             const topic = $(ev.currentTarget).data('topic');
             this._addUserMessage(topic);
             this._processTopicSelection(topic);
+            this._saveConversation();
         },
 
-        _addUserMessage: function (message) {
+        _addUserMessage: function (message, skipSave = false) {
             const $chatWindow = this.$('.chat-window');
             const messageElement = `
                 <div class="message user-message">
                     <div class="avatar user-avatar">
-                        <img src="/website_custom_chatbot/static/images/user_msg.PNG"/>
+                        <img src="/website_custom_chatbot/static/images/user_msg.png"/>
                     </div>
                     <div class="message-content user-message-content">
                         <p>${message}</p>
@@ -93,9 +168,13 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             `;
             $chatWindow.append(messageElement);
             this._scrollToBottom();
+            
+            if (!skipSave) {
+                this._saveConversation();
+            }
         },
 
-        _addBotMessage: function (message, topic = null, options = null) {
+        _addBotMessage: function (message, topic = null, options = null, skipSave = false) {
             const $chatWindow = this.$('.chat-window');
 
             let optionsHtml = '';
@@ -112,7 +191,7 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             const messageElement = `
                 <div class="message">
                     <div class="avatar bot-avatar">
-                        <img src="/website_custom_chatbot/static/images/CraftChat_2-02.PNG"/>
+                        <img src="/website_custom_chatbot/static/images/chatbot_icon.png"/>
                     </div>
                     <div class="message-content">
                         <p>${message}</p>
@@ -123,6 +202,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
             $chatWindow.append(messageElement);
             this._scrollToBottom();
+            
+            if (!skipSave) {
+                this._saveConversation();
+            }
         },
 
         _processTopicSelection: function (topic) {
@@ -178,12 +261,27 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             const isVisible = $chatbotContainer.hasClass('visible');
 
             if (!isVisible && !this._welcomeMessageShown) {
-                // Add the welcome message only once
                 this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
                 this._welcomeMessageShown = true;
             }
 
             $chatbotContainer.toggleClass('hidden visible');
+        },
+
+        _hideChatbot: function () {
+            const $chatbotContainer = this.$('.chatbot-container');
+            $chatbotContainer.addClass('hidden').removeClass('visible');
+        },
+
+        _closeChatbot: function () {
+            // Clear the conversation
+            localStorage.removeItem(this._chatHistoryKey);
+            this.$('.chat-window').empty();
+            this._welcomeMessageShown = false;
+
+            // Hide the chatbot
+            const $chatbotContainer = this.$('.chatbot-container');
+            $chatbotContainer.addClass('hidden').removeClass('visible');
         },
     });
 });
