@@ -11,15 +11,13 @@
     'website': 'https://yourwebsite.com',
     'depends': ['website'],
     'data': [
-        'views/snippets.xml',
-        'views/chatbot_template.xml'
+        'views/chatbot_template.xml',  # Keep only this file
     ],
     'assets': {
         'web.assets_frontend': [
             'website_custom_chatbot/static/src/js/chatbot.js',
             'website_custom_chatbot/static/src/js/chatbot_snippet_options.js',
             'website_custom_chatbot/static/src/scss/chatbot.scss',
-          
         ],
     },
     'installable': True,
