@@ -13,23 +13,23 @@
         <section class="s_chatbot">
             <div class="container">
                 <div class="chatbot-wrapper">
-                    <!-- Minimized Chatbot Button -->
+                    
                     <button class="chatbot-toggle">
                         <img src="/website_custom_chatbot/static/images/chatbot_icon.png" alt="Chatbot Icon"/>
                     </button>
 
-                    <!-- Chatbot Container -->
+                    
                     <div class="chatbot-container hidden">
                         <div class="chat-header">
                             <span>Chatbot</span>
                             <div class="header-buttons">
-                                <!-- Removed the clear-chatbot button -->
+                                
                                 <button class="hide-chatbot">-</button>
                                 <button class="close-chatbot">×</button>
                             </div>
                         </div>
                         <div class="chat-window">
-                            <!-- Chat window starts empty; messages will be added dynamically -->
+                            
                         </div>
                         <div class="chat-input">
                             <form class="chat-form">

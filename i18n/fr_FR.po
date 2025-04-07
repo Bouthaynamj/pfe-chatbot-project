@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_custom_chatbot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230915\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 14:34+0000\n"
+"PO-Revision-Date: 2025-04-06 14:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_custom_chatbot
+#: model_terms:ir.ui.view,arch_db:website_custom_chatbot.s_chatbot
+msgid "<span class=\"submit-icon\">→</span>"
+msgstr "<span class=\"submit-icon\">→</span>"
+
+#. module: website_custom_chatbot
+#: model_terms:ir.ui.view,arch_db:website_custom_chatbot.s_chatbot
+msgid "<span>Chatbot</span>"
+msgstr "<span>Chatbot</span>"
+
+#. module: website_custom_chatbot
+#: model_terms:ir.ui.view,arch_db:website_custom_chatbot.s_chatbot
+msgid "Ask a question"
+msgstr "Posez une question"
+
+#. module: website_custom_chatbot
+#: model_terms:ir.ui.view,arch_db:website_custom_chatbot.s_chatbot
+msgid "Chatbot Icon"
+msgstr "Icône du Chatbot"
+
+#. module: website_custom_chatbot
+#. odoo-python
+#: code:addons/website_custom_chatbot/controllers/main.py:0
+#, python-format
+msgid "Dataset file does not exist: %s"
+msgstr "Le fichier de données n'existe pas : %s"
+
+#. module: website_custom_chatbot
+#. odoo-python
+#: code:addons/website_custom_chatbot/controllers/main.py:0
+#, python-format
+msgid "Error loading dataset: %s"
+msgstr "Erreur lors du chargement du fichier de données : %s"
+
+#. module: website_custom_chatbot
+#. odoo-python
+#: code:addons/website_custom_chatbot/controllers/main.py:0
+#, python-format
+msgid "Loading dataset from: %s"
+msgstr "Chargement du fichier de données depuis : %s"
