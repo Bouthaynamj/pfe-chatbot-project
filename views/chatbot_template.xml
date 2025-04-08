@@ -10,32 +10,40 @@
     </template>
 
     <template id="s_chatbot" name="Chatbot">
-        <section class="s_chatbot">
+        <section class="s_chatbot py-5">
             <div class="container">
-                <div class="chatbot-wrapper">
-                    
-                    <button class="chatbot-toggle">
-                        <img src="/website_custom_chatbot/static/images/chatbot_icon.png" alt="Chatbot Icon"/>
+                <div class="chatbot-wrapper position-fixed" style="bottom: 20px; right: 20px; z-index: 1000;">
+                    <!-- Chatbot Toggle Button -->
+                    <button class="chatbot-toggle btn btn-primary rounded-circle shadow-lg d-flex justify-content-center align-items-center"
+                            style="width: 60px; height: 60px;">
+                        <img src="/website_custom_chatbot/static/images/chatbot_icon.png" alt="Chatbot Icon" class="img-fluid" style="width: 28px; height: 28px;"/>
                     </button>
 
-                    
-                    <div class="chatbot-container hidden">
-                        <div class="chat-header">
+                    <!-- Chatbot Container -->
+                    <div class="chatbot-container bg-white rounded-lg shadow-lg d-flex flex-column overflow-hidden hidden"
+                         style="width: 360px; height: 520px; position: absolute; bottom: 80px; right: 0;">
+                        <!-- Chat Header -->
+                        <div class="chat-header d-flex justify-content-between align-items-center p-2 text-white">
                             <span>Chatbot</span>
-                            <div class="header-buttons">
-                                
-                                <button class="hide-chatbot">-</button>
-                                <button class="close-chatbot">×</button>
+                            <div class="header-buttons d-flex gap-2">
+                                <button class="hide-chatbot btn btn-link text-white p-0">-</button>
+                                <button class="close-chatbot btn btn-link text-white p-0">×</button>
                             </div>
                         </div>
-                        <div class="chat-window">
-                            
+
+                        <!-- Chat Window -->
+                        <div class="chat-window flex-grow-1 overflow-auto p-3 bg-light">
+                            <!-- Messages will be dynamically added here -->
                         </div>
-                        <div class="chat-input">
-                            <form class="chat-form">
-                                <input type="text" class="chat-query" placeholder="Ask a question"/>
-                                <button type="submit" class="submit-btn">
-                                    <span class="submit-icon">→</span>
+
+                        <!-- Chat Input -->
+                        <div class="chat-input p-3 bg-white border-top">
+                            <form class="chat-form d-flex w-100 align-items-center">
+                                <input type="text" class="chat-query form-control rounded-pill" placeholder="Ask a question" 
+                                       style="border: 1px solid #ccc; padding: 10px 15px;"/>
+                                <button type="submit" class="submit-btn btn rounded-circle d-flex justify-content-center align-items-center ml-3"
+                                        style="background-color: #4F46E5; width: 48px; height: 48px; border: none; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                                    <span class="submit-icon text-white" style="font-size: 20px;">→</span>
                                 </button>
                             </form>
                         </div>
