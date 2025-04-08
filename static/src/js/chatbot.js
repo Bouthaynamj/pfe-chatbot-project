@@ -15,6 +15,7 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         start: function () {
+            this._sessionId = this._generateSessionId();
             this._welcomeMessageShown = false;
             this._chatHistoryKey = 'craftschoolship_chat_history';
 
@@ -23,6 +24,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                 this._restoreChatbotState();
                 this._setupChatbot();
             });
+        },
+
+        _generateSessionId: function () {
+            return 'session_' + Math.random().toString(36).substr(2, 9);
         },
 
         _setupChatbot: function () {
@@ -104,7 +109,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
             rpc.query({
                 route: '/website_custom_chatbot/process_message',
-                params: { message: query },
+                params: { 
+                    message: query,
+                    session_id: this._sessionId
+                },
             }).then(response => {
                 this._addBotMessage(response.message, null, response.options);
                 this._saveConversation();
@@ -121,7 +129,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             
             rpc.query({
                 route: '/website_custom_chatbot/process_message',
-                params: { message: topic },
+                params: { 
+                    message: topic,
+                    session_id: this._sessionId
+                },
             }).then(response => {
                 this._addBotMessage(response.message, null, response.options);
                 this._saveConversation();

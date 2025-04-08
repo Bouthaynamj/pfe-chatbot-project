@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chatbot_message_public,chatbot.message.public,model_chatbot_message,,1,0,1,0
+access_chatbot_message_user,chatbot.message.user,model_chatbot_message,base.group_user,1,1,1,1

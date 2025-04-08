@@ -11,7 +11,8 @@
     'website': 'https://yourwebsite.com',
     'depends': ['website'],
     'data': [
-        'views/chatbot_template.xml',  # Keep only this file
+        'security/ir.model.access.csv',
+        'views/chatbot_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
