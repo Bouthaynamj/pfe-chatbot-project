@@ -96,9 +96,47 @@ class ChatbotController(http.Controller):
                 self._save_message_to_db(message, response['message'], session_id)
                 return response
 
-            # Validate dataset and find best match
+            # Preprocess user message
+            user_message = message.lower().strip()
+            user_words = user_message.split()
+
+            # Create a keyword map for faster lookup
+            keyword_map = {}
+            for topic in dataset:
+                if not isinstance(topic, dict):
+                    continue
+                if 'keywords' in topic and isinstance(topic['keywords'], list):
+                    for keyword in topic['keywords']:
+                        keyword_lower = keyword.lower()
+                        if keyword_lower not in keyword_map:
+                            keyword_map[keyword_lower] = topic
+
+            # Check for direct keyword matches (including partial matches)
+            matched_topics = []
+            for word in user_words:
+                if word in keyword_map:
+                    matched_topics.append(keyword_map[word])
+                else:
+                    # Check for partial matches in keywords
+                    for keyword in keyword_map:
+                        if word in keyword or keyword in word:
+                            matched_topics.append(keyword_map[keyword])
+
+            # If we found keyword matches, return the best one
+            if matched_topics:
+                # Get the most relevant match (prioritize exact matches)
+                best_match = matched_topics[0]
+                response = {
+                    'message': best_match['answer'],
+                    'options': None
+                }
+                _logger.info("Keyword match found for message: %s", message)
+                self._save_message_to_db(message, response['message'], session_id)
+                return response
+
+            # If no keyword matches, check for similar questions
             best_match = None
-            best_score = 0.3  # Minimum threshold
+            best_score = 0.5  # Minimum threshold
             best_question = ""
 
             for topic in dataset:
@@ -109,7 +147,17 @@ class ChatbotController(http.Controller):
                 if 'questions' in topic and 'answer' in topic:
                     for question in topic['questions']:
                         try:
-                            score = self._similarity(message.lower(), question.lower())
+                            question_lower = question.lower()
+                            # Calculate similarity between user message and question
+                            score = self._similarity(user_message, question_lower)
+                            
+                            # Bonus for word matches
+                            question_words = set(question_lower.split())
+                            user_words_set = set(user_words)
+                            word_matches = question_words & user_words_set
+                            if word_matches:
+                                score += 0.1 * len(word_matches)  # Add 0.1 for each matching word
+                            
                             if score > best_score:
                                 best_score = score
                                 best_match = topic
@@ -119,18 +167,32 @@ class ChatbotController(http.Controller):
                             continue
 
             # If we found a good match
-            if best_match and best_score > 0.5:  # Increased threshold for better accuracy
+            if best_match and best_score > 0.5:
                 response = {
                     'message': best_match['answer'],
                     'options': None
                 }
                 _logger.info("Best match found with score %s for question: %s", best_score, best_question)
             else:
-                response = {
-                    'message': "I'm not sure I understand. Here are some topics you can ask about:",
-                    'options': main_topics
-                }
-                _logger.info("No suitable match found (best score was %s). Using fallback.", best_score)
+                # Try to find a match based on topic names
+                topic_match = None
+                for topic in dataset:
+                    topic_name = topic.get('topic', '').lower()
+                    if any(word in topic_name for word in user_words):
+                        topic_match = topic
+                        break
+                
+                if topic_match:
+                    response = {
+                        'message': topic_match['answer'],
+                        'options': None
+                    }
+                else:
+                    response = {
+                        'message': "I'm not sure I understand. Here are some topics you can ask about:",
+                        'options': main_topics
+                    }
+                    _logger.info("No suitable match found (best score was %s). Using fallback.", best_score)
 
             # Save the conversation in the database
             self._save_message_to_db(message, response['message'], session_id)
@@ -139,10 +201,10 @@ class ChatbotController(http.Controller):
 
         except Exception as e:
             _logger.error("Error processing message: %s", str(e), exc_info=True)
-        return {
+            return {
                 'message': "I encountered an error processing your request. Please try again.",
                 'options': None
-}
+            }
 
     def _similarity(self, a, b):
         """Calculate similarity between two strings using SequenceMatcher."""
@@ -153,22 +215,21 @@ class ChatbotController(http.Controller):
             return 0
 
     def _save_message_to_db(self, user_message, bot_response, session_id):
-        """Helper method to save messages to the database."""
+        """Helper method to save messages to database."""
         try:
             if not hasattr(request, 'env'):
                 _logger.warning("No request.env available, skipping DB save")
                 return
-
-            visitor = request.env['website.visitor']._get_visitor_from_request()  # Get the current visitor
+                
             ChatbotMessage = request.env['chatbot.message'].sudo()
             if not ChatbotMessage:
                 _logger.warning("ChatbotMessage model not found, skipping DB save")
                 return
-
+                
             ChatbotMessage.create_message(
-                request=user_message,
-                response=bot_response,
-                visitor_id=visitor.id if visitor else None,  # Associate with visitor
+                user_message=user_message,
+                bot_response=bot_response,
+                session_id=session_id,
                 ip_address=request.httprequest.remote_addr
             )
         except Exception as e:
