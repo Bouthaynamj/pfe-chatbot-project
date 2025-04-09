@@ -139,10 +139,10 @@ class ChatbotController(http.Controller):
 
         except Exception as e:
             _logger.error("Error processing message: %s", str(e), exc_info=True)
-            return {
+        return {
                 'message': "I encountered an error processing your request. Please try again.",
                 'options': None
-            }
+}
 
     def _similarity(self, a, b):
         """Calculate similarity between two strings using SequenceMatcher."""
@@ -153,21 +153,22 @@ class ChatbotController(http.Controller):
             return 0
 
     def _save_message_to_db(self, user_message, bot_response, session_id):
-        """Helper method to save messages to database."""
+        """Helper method to save messages to the database."""
         try:
             if not hasattr(request, 'env'):
                 _logger.warning("No request.env available, skipping DB save")
                 return
-                
+
+            visitor = request.env['website.visitor']._get_visitor_from_request()  # Get the current visitor
             ChatbotMessage = request.env['chatbot.message'].sudo()
             if not ChatbotMessage:
                 _logger.warning("ChatbotMessage model not found, skipping DB save")
                 return
-                
+
             ChatbotMessage.create_message(
-                user_message=user_message,
-                bot_response=bot_response,
-                session_id=session_id,
+                request=user_message,
+                response=bot_response,
+                visitor_id=visitor.id if visitor else None,  # Associate with visitor
                 ip_address=request.httprequest.remote_addr
             )
         except Exception as e:
