@@ -1,4 +1,3 @@
-
 from odoo import http, _
 import json
 import os
@@ -13,8 +12,9 @@ class ChatbotController(http.Controller):
     @http.route('/website_custom_chatbot/load_dataset', type='json', auth='public')
     def load_dataset(self, **kwargs):
         try:
+            # Update the path to point to the static folder
             module_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            dataset_path = os.path.join(module_path, 'data', 'erp_dataset.json')
+            dataset_path = os.path.join(module_path, 'static', 'src', 'data', 'erp_dataset.json')  # Updated path
             _logger.info(_("Loading dataset from: %s") % dataset_path)
 
             if not os.path.exists(dataset_path):
@@ -44,14 +44,12 @@ class ChatbotController(http.Controller):
 
             # Validate user input
             if not message or not isinstance(message, str):
-                _logger.error("Invalid input: message is missing or not a string")
                 return {
                     'message': "Please provide a valid message.",
                     'options': None
                 }
 
             if not session_id or not isinstance(session_id, str):
-                _logger.error("Invalid input: session_id is missing or not a string")
                 return {
                     'message': "Session error. Please refresh the page.",
                     'options': None
@@ -60,14 +58,12 @@ class ChatbotController(http.Controller):
             # Load dataset
             dataset = self.load_dataset()
             if isinstance(dataset, dict) and 'error' in dataset:
-                _logger.error("Failed to load dataset: %s", dataset['error'])
                 return {
                     'message': "I'm having trouble accessing my knowledge base. Please try again later.",
                     'options': None
                 }
 
             if not dataset or not isinstance(dataset, list):
-                _logger.error("Empty or invalid dataset")
                 return {
                     'message': "I'm currently unable to answer questions. Please try again later.",
                     'options': None
@@ -92,7 +88,6 @@ class ChatbotController(http.Controller):
                     'message': "Here are some topics you can ask about:",
                     'options': main_topics
                 }
-                _logger.info("Help command detected. Responding with main topics.")
                 self._save_message_to_db(message, response['message'], session_id)
                 return response
 
@@ -103,8 +98,6 @@ class ChatbotController(http.Controller):
             # Create a keyword map for faster lookup
             keyword_map = {}
             for topic in dataset:
-                if not isinstance(topic, dict):
-                    continue
                 if 'keywords' in topic and isinstance(topic['keywords'], list):
                     for keyword in topic['keywords']:
                         keyword_lower = keyword.lower()
@@ -124,24 +117,21 @@ class ChatbotController(http.Controller):
 
             # If we found keyword matches, return the best one
             if matched_topics:
-                # Get the most relevant match 
                 best_match = matched_topics[0]
                 response = {
                     'message': best_match['answer'],
                     'options': None
                 }
-                _logger.info("Keyword match found for message: %s", message)
                 self._save_message_to_db(message, response['message'], session_id)
                 return response
 
-            # If no keyword matches, check for similar questions
+            # Enhanced similarity matching
             best_match = None
             best_score = 0.5  
             best_question = ""
 
             for topic in dataset:
                 if not isinstance(topic, dict):
-                    _logger.warning("Invalid topic format: %s", topic)
                     continue
                     
                 if 'questions' in topic and 'answer' in topic:
@@ -151,7 +141,7 @@ class ChatbotController(http.Controller):
                             # Calculate similarity between user message and question
                             score = self._similarity(user_message, question_lower)
                             
-                          
+                            # Bonus for word matches
                             question_words = set(question_lower.split())
                             user_words_set = set(user_words)
                             word_matches = question_words & user_words_set
@@ -166,13 +156,11 @@ class ChatbotController(http.Controller):
                             _logger.warning("Error calculating similarity: %s", str(e))
                             continue
 
-           
             if best_match and best_score > 0.5:
                 response = {
                     'message': best_match['answer'],
                     'options': None
                 }
-                _logger.info("Best match found with score %s for question: %s", best_score, best_question)
             else:
                 # Try to find a match based on topic names
                 topic_match = None
@@ -192,11 +180,8 @@ class ChatbotController(http.Controller):
                         'message': "I'm not sure I understand. Here are some topics you can ask about:",
                         'options': main_topics
                     }
-                    _logger.info("No suitable match found (best score was %s). Using fallback.", best_score)
 
-            # Save the conversation in the database
             self._save_message_to_db(message, response['message'], session_id)
-            
             return response
 
         except Exception as e:
@@ -215,22 +200,14 @@ class ChatbotController(http.Controller):
             return 0
 
     def _save_message_to_db(self, user_message, bot_response, session_id):
-        """Helper method to save messages to database."""
+        """Helper method to save messages to the database."""
         try:
-            if not hasattr(request, 'env'):
-                _logger.warning("No request.env available, skipping DB save")
-                return
-                
             ChatbotMessage = request.env['chatbot.message'].sudo()
-            if not ChatbotMessage:
-                _logger.warning("ChatbotMessage model not found, skipping DB save")
-                return
-                
-            ChatbotMessage.create_message(
-                user_message=user_message,
-                bot_response=bot_response,
-                session_id=session_id,
-                ip_address=request.httprequest.remote_addr
-            )
+            ChatbotMessage.create({
+                'request': user_message,
+                'response': bot_response,
+                'visitor_id': None,
+                'user_id': request.env.user.id
+            })
         except Exception as e:
             _logger.error("Error saving message to DB: %s", str(e), exc_info=True)

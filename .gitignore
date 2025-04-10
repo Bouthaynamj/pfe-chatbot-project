@@ -1,0 +1,31 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore compiled files
+*.so
+*.dll
+*.exe
+
+# Ignore Odoo-specific files
+*.zip
+*.dist-info/
+*.egg-info/
+*.odoo_addon/
