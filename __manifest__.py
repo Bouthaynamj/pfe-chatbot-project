@@ -13,6 +13,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/chatbot_template.xml',
+       
     ],
     'assets': {
         'web.assets_frontend': [

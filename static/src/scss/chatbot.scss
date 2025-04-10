@@ -2,7 +2,7 @@
     padding: 40px 0;
 
     .chatbot-container {
-        border-radius: 20px;
+        border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         overflow: hidden;
         transform-origin: bottom right;
@@ -27,15 +27,19 @@
         }
     }
 
+    .chat-window {
+        background-color: #f8f9fa;
+    }
+
     .message-content {
-        border-radius: 14px;
+        border-radius: 12px;
         word-wrap: break-word;
         line-height: 1.6;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
     .user-message .message-content {
-        background-color: #4F46E5;
+        background-color: #007bff;
         color: #ffffff;
     }
 
@@ -46,7 +50,7 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: #8e8ff3;
+            background-color: #0056b3;
             color: #ffffff;
         }
     }
@@ -66,7 +70,7 @@
 }
 .option-button {
     &:hover {
-        background-color: #8e8ff3 !important;
+        background-color: #0056b3 !important;
         color: #ffffff !important;
     }
 }

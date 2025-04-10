@@ -1,4 +1,4 @@
-# controllers/main.py
+
 from odoo import http, _
 import json
 import os
@@ -111,7 +111,7 @@ class ChatbotController(http.Controller):
                         if keyword_lower not in keyword_map:
                             keyword_map[keyword_lower] = topic
 
-            # Check for direct keyword matches (including partial matches)
+            # Check for direct keyword matches 
             matched_topics = []
             for word in user_words:
                 if word in keyword_map:
@@ -124,7 +124,7 @@ class ChatbotController(http.Controller):
 
             # If we found keyword matches, return the best one
             if matched_topics:
-                # Get the most relevant match (prioritize exact matches)
+                # Get the most relevant match 
                 best_match = matched_topics[0]
                 response = {
                     'message': best_match['answer'],
@@ -136,7 +136,7 @@ class ChatbotController(http.Controller):
 
             # If no keyword matches, check for similar questions
             best_match = None
-            best_score = 0.5  # Minimum threshold
+            best_score = 0.5  
             best_question = ""
 
             for topic in dataset:
@@ -151,12 +151,12 @@ class ChatbotController(http.Controller):
                             # Calculate similarity between user message and question
                             score = self._similarity(user_message, question_lower)
                             
-                            # Bonus for word matches
+                          
                             question_words = set(question_lower.split())
                             user_words_set = set(user_words)
                             word_matches = question_words & user_words_set
                             if word_matches:
-                                score += 0.1 * len(word_matches)  # Add 0.1 for each matching word
+                                score += 0.1 * len(word_matches)  
                             
                             if score > best_score:
                                 best_score = score
@@ -166,7 +166,7 @@ class ChatbotController(http.Controller):
                             _logger.warning("Error calculating similarity: %s", str(e))
                             continue
 
-            # If we found a good match
+           
             if best_match and best_score > 0.5:
                 response = {
                     'message': best_match['answer'],
