@@ -4,7 +4,8 @@
         <xpath expr="//div[@id='snippet_structure']" position="inside">
             <div class="o_panel_body">
                 <t t-snippet="website_custom_chatbot.s_chatbot"
-                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"/>
+                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"
+                   t-options="website_custom_chatbot.ChatbotOptions"/>
             </div>
         </xpath>
     </template>
@@ -50,15 +51,5 @@
                 </div>
             </div>
         </section>
-    </template>
-
-    <template id="snippets_chatbot_options" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_structure']" position="inside">
-            <div class="o_panel_body">
-                <t t-snippet="website_custom_chatbot.s_chatbot"
-                   t-thumbnail="/website_custom_chatbot/static/images/chatbot_icon.png"
-                   t-options="website_custom_chatbot.ChatbotOptions"/>
-            </div>
-        </xpath>
     </template>
 </odoo>

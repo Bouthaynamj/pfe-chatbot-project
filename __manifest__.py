@@ -1,5 +1,5 @@
 {
-    'name': 'Website Custom Chatbot',
+    'name': 'Craftschoolship_Bot',
     'version': '1.0',
     'category': 'Website',
     'summary': 'Adds a custom chatbot snippet to the website builder',

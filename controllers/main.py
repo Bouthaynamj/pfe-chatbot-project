@@ -36,6 +36,126 @@ class ChatbotController(http.Controller):
             _logger.error(_("Error loading dataset: %s") % str(e))
             return {"error": str(e)}
 
+    def _get_main_topics(self):
+        """Returns the list of main topics for fallback"""
+        return [
+            "CraftSchoolship Overview",
+            "CraftEd ERP",
+            "CraftEd LMS",
+            "CraftEd Chat",
+            "CraftEd Meet",
+            "CraftEd AI",
+            "CraftEd Mobile",
+            "CraftEd Workspace",
+            "CraftEd Universe"
+        ]
+
+    def _find_best_match(self, user_message, dataset):
+        """Finds the best matching answer for the user message"""
+        best_match = None
+        best_score = 0.5
+        best_question = ""
+
+        for topic in dataset:
+            if not isinstance(topic, dict):
+                continue
+                
+            if 'questions' in topic and 'answer' in topic:
+                for question in topic['questions']:
+                    try:
+                        question_lower = question.lower()
+                        score = self._similarity(user_message, question_lower)
+                        
+                        question_words = set(question_lower.split())
+                        user_words_set = set(user_message.split())
+                        word_matches = question_words & user_words_set
+                        if word_matches:
+                            score += 0.1 * len(word_matches)  
+                        
+                        if score > best_score:
+                            best_score = score
+                            best_match = topic
+                            best_question = question
+                    except Exception as e:
+                        _logger.warning("Error calculating similarity: %s", str(e))
+                        continue
+
+        return best_match, best_score
+
+    def _find_topic_match(self, user_message, dataset):
+        """Finds a match based on topic names"""
+        user_words = user_message.split()
+        for topic in dataset:
+            topic_name = topic.get('topic', '').lower()
+            if any(word in topic_name for word in user_words):
+                return topic
+        return None
+
+    def _get_keyword_matches(self, user_message, dataset):
+        """Finds matches based on keywords"""
+        user_words = user_message.split()
+        keyword_map = {}
+        matched_topics = []
+        
+        for topic in dataset:
+            if 'keywords' in topic and isinstance(topic['keywords'], list):
+                for keyword in topic['keywords']:
+                    keyword_lower = keyword.lower()
+                    if keyword_lower not in keyword_map:
+                        keyword_map[keyword_lower] = topic
+
+        for word in user_words:
+            if word in keyword_map:
+                matched_topics.append(keyword_map[word])
+            else:
+                for keyword in keyword_map:
+                    if word in keyword or keyword in word:
+                        matched_topics.append(keyword_map[keyword])
+
+        return matched_topics
+
+    def _process_user_message(self, message, dataset):
+        """Processes the user message and returns the appropriate response"""
+        # Handle help command
+        if message.lower().strip() in ['help', 'hi', 'hello']:
+            return {
+                'message': "Here are some topics you can ask about:",
+                'options': self._get_main_topics()
+            }
+
+        user_message = message.lower().strip()
+        
+        # Check for keyword matches
+        keyword_matches = self._get_keyword_matches(user_message, dataset)
+        if keyword_matches:
+            return {
+                'message': keyword_matches[0]['answer'],
+                'options': None
+            }
+
+        # Enhanced similarity matching
+        best_match, best_score = self._find_best_match(user_message, dataset)
+        
+        if best_match and best_score > 0.5:
+            return {
+                'message': best_match['answer'],
+                'options': None
+            }
+        else:
+            # Try to find a match based on topic names
+            topic_match = self._find_topic_match(user_message, dataset)
+            
+            if topic_match:
+                return {
+                    'message': topic_match['answer'],
+                    'options': None
+                }
+            else:
+                return {
+                    'message': "I'm not sure I understand. Here are some topics you can ask about:",
+                    'options': self._get_main_topics()
+                }
+
     @http.route('/website_custom_chatbot/process_message', type='json', auth='public')
     def process_message(self, message, session_id, **kwargs):
         try:
@@ -69,118 +189,7 @@ class ChatbotController(http.Controller):
                     'options': None
                 }
 
-            # Main topics for fallback
-            main_topics = [
-                "CraftSchoolship Overview",
-                "CraftEd ERP",
-                "CraftEd LMS",
-                "CraftEd Chat",
-                "CraftEd Meet",
-                "CraftEd AI",
-                "CraftEd Mobile",
-                "CraftEd Workspace",
-                "CraftEd Universe"
-            ]
-
-            # Handle help command
-            if message.lower().strip() in ['help', 'hi', 'hello']:
-                response = {
-                    'message': "Here are some topics you can ask about:",
-                    'options': main_topics
-                }
-                self._save_message_to_db(message, response['message'], session_id)
-                return response
-
-            # Preprocess user message
-            user_message = message.lower().strip()
-            user_words = user_message.split()
-
-            # Create a keyword map for faster lookup
-            keyword_map = {}
-            for topic in dataset:
-                if 'keywords' in topic and isinstance(topic['keywords'], list):
-                    for keyword in topic['keywords']:
-                        keyword_lower = keyword.lower()
-                        if keyword_lower not in keyword_map:
-                            keyword_map[keyword_lower] = topic
-
-            # Check for direct keyword matches 
-            matched_topics = []
-            for word in user_words:
-                if word in keyword_map:
-                    matched_topics.append(keyword_map[word])
-                else:
-                    # Check for partial matches in keywords
-                    for keyword in keyword_map:
-                        if word in keyword or keyword in word:
-                            matched_topics.append(keyword_map[keyword])
-
-            # If we found keyword matches, return the best one
-            if matched_topics:
-                best_match = matched_topics[0]
-                response = {
-                    'message': best_match['answer'],
-                    'options': None
-                }
-                self._save_message_to_db(message, response['message'], session_id)
-                return response
-
-            # Enhanced similarity matching
-            best_match = None
-            best_score = 0.5  
-            best_question = ""
-
-            for topic in dataset:
-                if not isinstance(topic, dict):
-                    continue
-                    
-                if 'questions' in topic and 'answer' in topic:
-                    for question in topic['questions']:
-                        try:
-                            question_lower = question.lower()
-                            # Calculate similarity between user message and question
-                            score = self._similarity(user_message, question_lower)
-                            
-                            # Bonus for word matches
-                            question_words = set(question_lower.split())
-                            user_words_set = set(user_words)
-                            word_matches = question_words & user_words_set
-                            if word_matches:
-                                score += 0.1 * len(word_matches)  
-                            
-                            if score > best_score:
-                                best_score = score
-                                best_match = topic
-                                best_question = question
-                        except Exception as e:
-                            _logger.warning("Error calculating similarity: %s", str(e))
-                            continue
-
-            if best_match and best_score > 0.5:
-                response = {
-                    'message': best_match['answer'],
-                    'options': None
-                }
-            else:
-                # Try to find a match based on topic names
-                topic_match = None
-                for topic in dataset:
-                    topic_name = topic.get('topic', '').lower()
-                    if any(word in topic_name for word in user_words):
-                        topic_match = topic
-                        break
-                
-                if topic_match:
-                    response = {
-                        'message': topic_match['answer'],
-                        'options': None
-                    }
-                else:
-                    response = {
-                        'message': "I'm not sure I understand. Here are some topics you can ask about:",
-                        'options': main_topics
-                    }
-
+            response = self._process_user_message(message, dataset)
             self._save_message_to_db(message, response['message'], session_id)
             return response
 
@@ -205,9 +214,9 @@ class ChatbotController(http.Controller):
             ChatbotMessage = request.env['chatbot.message'].sudo()
             ChatbotMessage.create({
                 'request': user_message,
-                'response': bot_response,
                 'visitor_id': None,
                 'user_id': request.env.user.id
+                # response will be computed automatically
             })
         except Exception as e:
             _logger.error("Error saving message to DB: %s", str(e), exc_info=True)

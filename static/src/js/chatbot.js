@@ -16,8 +16,8 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         start: function () {
             this._sessionId = this._generateSessionId();
-            this._welcomeMessageShown = false;
             this._chatHistoryKey = 'craftschoolship_chat_history';
+            this._welcomeMessageShownKey = 'chatbot_welcome_message_shown';
 
             return this._super.apply(this, arguments).then(() => {
                 this.$('.hide-chatbot').on('click', this._hideChatbot.bind(this));
@@ -32,10 +32,12 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         _setupChatbot: function () {
             this._loadConversation();
-            
-            if (!this._welcomeMessageShown) {
+
+            // Check if the welcome message has already been shown
+            const welcomeMessageShown = localStorage.getItem(this._welcomeMessageShownKey);
+            if (!welcomeMessageShown) {
                 this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
-                this._welcomeMessageShown = true;
+                localStorage.setItem(this._welcomeMessageShownKey, 'true');
             }
         },
 
@@ -61,7 +63,6 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                     }
                 });
                 
-                this._welcomeMessageShown = true;
                 this._scrollToBottom();
             }
         },
@@ -212,11 +213,6 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             const $chatbotContainer = this.$('.chatbot-container');
             const isVisible = $chatbotContainer.hasClass('visible');
 
-            if (!isVisible && !this._welcomeMessageShown) {
-                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
-                this._welcomeMessageShown = true;
-            }
-
             $chatbotContainer.toggleClass('hidden visible');
             localStorage.setItem('chatbot_state', isVisible ? 'closed' : 'open');
         },
@@ -229,8 +225,8 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         _closeChatbot: function () {
             localStorage.removeItem(this._chatHistoryKey);
+            localStorage.removeItem(this._welcomeMessageShownKey);
             this.$('.chat-window').empty();
-            this._welcomeMessageShown = false;
 
             const $chatbotContainer = this.$('.chatbot-container');
             $chatbotContainer.addClass('hidden').removeClass('visible');
@@ -240,7 +236,7 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         _clearConversation: function () {
             localStorage.removeItem(this._chatHistoryKey);
             this.$('.chat-window').empty();
-            this._welcomeMessageShown = false;
+            localStorage.removeItem(this._welcomeMessageShownKey);
             this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?");
         },
 
