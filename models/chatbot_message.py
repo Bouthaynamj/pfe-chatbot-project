@@ -1,4 +1,10 @@
 from odoo import models, fields, api
+import json
+import os
+import logging
+from difflib import SequenceMatcher
+
+_logger = logging.getLogger(__name__)
 
 class ChatbotMessage(models.TransientModel):  
     _name = 'chatbot.message'
@@ -6,7 +12,8 @@ class ChatbotMessage(models.TransientModel):
 
     # Fields
     request = fields.Text(string='Request', required=True)  
-    response = fields.Text(string='Response', compute='_compute_response', precompute=True, store=True)  
+    response = fields.Text(string='Response', compute='_compute_response', precompute=True, store=True)
+    session_id = fields.Char(string='Session ID', readonly=True)
     visitor_id = fields.Many2one('website.visitor', string='Visitor', readonly=True)  
     user_id = fields.Many2one(
         'res.users', 
@@ -41,50 +48,101 @@ class ChatbotMessage(models.TransientModel):
             response = self._process_user_message(record.request, dataset)
             record.response = response.get('message', "I couldn't understand your question.")
 
+    @api.model
     def _load_dataset(self):
         """Load the dataset from the JSON file"""
         try:
             module_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             dataset_path = os.path.join(module_path, 'static', 'src', 'data', 'erp_dataset.json')
+            _logger.info("Loading dataset from: %s", dataset_path)
             
             if not os.path.exists(dataset_path):
+                _logger.error("Dataset file does not exist: %s", dataset_path)
                 return {"error": "Dataset file not found"}
 
             with open(dataset_path, 'r', encoding='utf-8') as file:
-                return json.load(file)
+                dataset = json.load(file)
+
+            if not isinstance(dataset, list):
+                _logger.error("Invalid dataset format. Expected list, got %s", type(dataset))
+                return {"error": "Invalid dataset format"}
+                
+            return dataset
+        except json.JSONDecodeError as e:
+            _logger.error("Error decoding JSON dataset: %s", str(e))
+            return {"error": "Invalid JSON format"}
         except Exception as e:
+            _logger.error("Error loading dataset: %s", str(e))
             return {"error": str(e)}
 
     def _similarity(self, a, b):
         """Calculate similarity between two strings using SequenceMatcher."""
         try:
             return SequenceMatcher(None, a, b).ratio()
-        except Exception:
+        except Exception as e:
+            _logger.warning("Error in similarity calculation: %s", str(e))
             return 0
 
-    def _process_user_message(self, message, dataset):
-        """Process the user message and return the appropriate response"""
-        # Handle help command
-        if message.lower().strip() in ['help', 'hi', 'hello']:
-            return {
-                'message': "Here are some topics you can ask about:",
-                'options': [
-                    "CraftSchoolship Overview",
-                    "CraftEd ERP",
-                    "CraftEd LMS",
-                    "CraftEd Chat",
-                    "CraftEd Meet",
-                    "CraftEd AI",
-                    "CraftEd Mobile",
-                    "CraftEd Workspace",
-                    "CraftEd Universe"
-                ]
-            }
+    def _get_main_topics(self):
+        """Returns the list of main topics for fallback"""
+        return [
+            "CraftSchoolship Overview",
+            "CraftEd ERP",
+            "CraftEd LMS",
+            "CraftEd Chat",
+            "CraftEd Meet",
+            "CraftEd AI",
+            "CraftEd Mobile",
+            "CraftEd Workspace",
+            "CraftEd Universe"
+        ]
 
-        user_message = message.lower().strip()
+    def _find_best_match(self, user_message, dataset):
+        """Finds the best matching answer for the user message"""
+        best_match = None
+        best_score = 0.5
+        best_question = ""
+
         user_words = user_message.split()
+        user_words_set = set(user_words)
 
-        # Check for keyword matches
+        for topic in dataset:
+            if not isinstance(topic, dict):
+                continue
+                
+            if 'questions' in topic and 'answer' in topic:
+                for question in topic['questions']:
+                    try:
+                        question_lower = question.lower()
+                        score = self._similarity(user_message, question_lower)
+                        
+                        question_words = set(question_lower.split())
+                        word_matches = question_words & user_words_set
+                        if word_matches:
+                            score += 0.1 * len(word_matches)  
+                        
+                        if score > best_score:
+                            best_score = score
+                            best_match = topic
+                            best_question = question
+                    except Exception as e:
+                        _logger.warning("Error calculating similarity: %s", str(e))
+                        continue
+
+        return best_match, best_score
+
+    def _find_topic_match(self, user_message, dataset):
+        """Finds a match based on topic names"""
+        user_words = user_message.split()
+        for topic in dataset:
+            topic_name = topic.get('topic', '').lower()
+            if any(word in topic_name for word in user_words):
+                return topic
+        return None
+
+    def _get_keyword_matches(self, user_message, dataset):
+        """Finds matches based on keywords"""
+        user_words = user_message.split()
         keyword_map = {}
         matched_topics = []
         
@@ -103,62 +161,99 @@ class ChatbotMessage(models.TransientModel):
                     if word in keyword or keyword in word:
                         matched_topics.append(keyword_map[keyword])
 
-        if matched_topics:
-            return {'message': matched_topics[0]['answer']}
+        return matched_topics
+
+    def _process_user_message(self, message, dataset):
+        """Processes the user message and returns the appropriate response"""
+        # Handle help command
+        if message.lower().strip() in ['help', 'hi', 'hello']:
+            return {
+                'message': "Hello,here are some topics you can ask about:",
+                'options': self._get_main_topics()
+            }
+
+        user_message = message.lower().strip()
+        
+        # Check for keyword matches
+        keyword_matches = self._get_keyword_matches(user_message, dataset)
+        if keyword_matches:
+            return {
+                'message': keyword_matches[0]['answer'],
+                'options': None
+            }
 
         # Enhanced similarity matching
-        best_match = None
-        best_score = 0.5
-        best_question = ""
-
-        for topic in dataset:
-            if not isinstance(topic, dict):
-                continue
-                
-            if 'questions' in topic and 'answer' in topic:
-                for question in topic['questions']:
-                    try:
-                        question_lower = question.lower()
-                        score = self._similarity(user_message, question_lower)
-                        
-                        question_words = set(question_lower.split())
-                        user_words_set = set(user_words)
-                        word_matches = question_words & user_words_set
-                        if word_matches:
-                            score += 0.1 * len(word_matches)  
-                        
-                        if score > best_score:
-                            best_score = score
-                            best_match = topic
-                            best_question = question
-                    except Exception:
-                        continue
-
+        best_match, best_score = self._find_best_match(user_message, dataset)
+        
         if best_match and best_score > 0.5:
-            return {'message': best_match['answer']}
+            return {
+                'message': best_match['answer'],
+                'options': None
+            }
         else:
             # Try to find a match based on topic names
-            topic_match = None
-            for topic in dataset:
-                topic_name = topic.get('topic', '').lower()
-                if any(word in topic_name for word in user_words):
-                    topic_match = topic
-                    break
+            topic_match = self._find_topic_match(user_message, dataset)
             
             if topic_match:
-                return {'message': topic_match['answer']}
+                return {
+                    'message': topic_match['answer'],
+                    'options': None
+                }
             else:
                 return {
                     'message': "I'm not sure I understand. Here are some topics you can ask about:",
-                    'options': [
-                        "CraftSchoolship Overview",
-                        "CraftEd ERP",
-                        "CraftEd LMS",
-                        "CraftEd Chat",
-                        "CraftEd Meet",
-                        "CraftEd AI",
-                        "CraftEd Mobile",
-                        "CraftEd Workspace",
-                        "CraftEd Universe"
-                    ]
+                    'options': self._get_main_topics()
                 }
+    
+    @api.model
+    def process_message(self, message, visitor_id):
+        """Process chatbot message and return response"""
+        try:
+            _logger.info("Processing message: %s", message)
+            _logger.info("Visitor ID: %s", visitor_id)
+
+            # Validate user input
+            if not message or not isinstance(message, str):
+                return {
+                    'message': "Please provide a valid message.",
+                    'options': None
+                }
+
+            if not visitor_id or not isinstance(visitor_id, str):
+                return {
+                    'message': "Visitor error. Please refresh the page.",
+                    'options': None
+                }
+
+            # Load dataset
+            dataset = self._load_dataset()
+            if isinstance(dataset, dict) and 'error' in dataset:
+                return {
+                    'message': "I'm having trouble accessing my knowledge base. Please try again later.",
+                    'options': None
+                }
+
+            if not dataset or not isinstance(dataset, list):
+                return {
+                    'message': "I'm currently unable to answer questions. Please try again later.",
+                    'options': None
+                }
+
+            # Process the message and get response
+            response_data = self._process_user_message(message, dataset)
+            
+            # Create message record
+            self.create({
+                'request': message,
+                'visitor_id': visitor_id,
+          
+            })
+            
+            return response_data
+
+        except Exception as e:
+            _logger.error("Error processing message: %s", str(e), exc_info=True)
+            return {
+                'message': "I encountered an error processing your request. Please try again.",
+                'options': None
+            }
