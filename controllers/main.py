@@ -21,13 +21,11 @@ class ChatbotController(http.Controller):
     @http.route('/website_custom_chatbot/save_message', type='json', auth='public')
     def save_message(self, message_type, content, visitor_id, options=None, **kwargs):
         """Save a message to the chat history"""
-        
         return {'success': True}
         
     @http.route('/website_custom_chatbot/get_conversation', type='json', auth='public')
     def get_conversation(self, visitor_id, **kwargs):
         """Get conversation history for a visitor"""
-
         return {'messages': []}
         
     @http.route('/website_custom_chatbot/clear_conversation', type='json', auth='public')
