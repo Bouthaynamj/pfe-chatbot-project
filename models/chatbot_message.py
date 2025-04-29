@@ -2,6 +2,7 @@ from odoo import models, fields, api
 import json
 import os
 import logging
+import uuid
 from difflib import SequenceMatcher
 
 _logger = logging.getLogger(__name__)
@@ -21,6 +22,20 @@ class ChatbotMessage(models.TransientModel):
         readonly=True,
         default=lambda self: self.env.user.id
     )
+
+    @api.model
+    def get_visitor_from_request(self):
+        """Get or create a visitor ID for the chatbot session"""
+        try:
+            visitor = self.env['website.visitor'].sudo()._get_visitor_from_request()
+            if visitor:
+                return {'visitor_id': str(visitor.id)}
+            else:
+                # Create a random ID if no visitor record exists
+                return {'visitor_id': str(uuid.uuid4())}
+        except Exception as e:
+            _logger.error("Error getting visitor: %s", str(e))
+            return {'visitor_id': 'local_' + str(uuid.uuid4())}
 
     @api.model
     def create(self, vals):
@@ -168,7 +183,7 @@ class ChatbotMessage(models.TransientModel):
         # Handle help command
         if message.lower().strip() in ['help', 'hi', 'hello']:
             return {
-                'message': "Hello,here are some topics you can ask about:",
+                'message': "Hello, here are some topics you can ask about:",
                 'options': self._get_main_topics()
             }
 
@@ -256,3 +271,36 @@ class ChatbotMessage(models.TransientModel):
                 'message': "I encountered an error processing your request. Please try again.",
                 'options': None
             }
+            
+    @api.model
+    def save_message(self, message_type, content, visitor_id, options=None):
+        """Save a message to the chat history"""
+        return self.create({
+            'request': content if message_type == 'user' else '',
+            'response': content if message_type == 'bot' else '',
+            'visitor_id': visitor_id,
+        }).id
+        
+    @api.model
+    def get_conversation(self, visitor_id):
+        """Get conversation history for a visitor"""
+        messages = self.search([
+            ('visitor_id', '=', visitor_id)
+        ], order='create_date asc')
+        
+        return {
+            'messages': [{
+                'type': 'user' if msg.request else 'bot',
+                'content': msg.request or msg.response,
+                'date': msg.create_date
+            } for msg in messages]
+        }
+        
+    @api.model
+    def clear_conversation(self, visitor_id):
+        """Clear conversation history for a visitor"""
+        messages = self.search([
+            ('visitor_id', '=', visitor_id)
+        ])
+        messages.unlink()
+        return {'success': True}

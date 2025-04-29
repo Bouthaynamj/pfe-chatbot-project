@@ -26,8 +26,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         _getVisitorId: function() {
-            return rpc.query({
-                route: '/website_custom_chatbot/get_visitor_id',
+            return this._rpc({
+                model: 'chatbot.message',
+                method: 'get_visitor_from_request',
+                args: [],
             }).then(result => {
                 this._visitorId = result.visitor_id;
                 return this._visitorId;
@@ -44,9 +46,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         _loadConversation: function () {
-            return rpc.query({
-                route: '/website_custom_chatbot/get_conversation',
-                params: { visitor_id: this._visitorId },
+            return this._rpc({
+                model: 'chatbot.message',
+                method: 'get_conversation',
+                args: [this._visitorId],
             }).then(result => {
                 const $chatWindow = this.$('.chat-window');
                 $chatWindow.empty();
@@ -80,12 +83,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             $input.val('');
             this._addUserMessage(query);
 
-            rpc.query({
-                route: '/website_custom_chatbot/process_message',
-                params: { 
-                    message: query,
-                    visitor_id: this._visitorId
-                },
+            this._rpc({
+                model: 'chatbot.message',
+                method: 'process_message',
+                args: [query, this._visitorId],
             }).then(response => {
                 this._addBotMessage(response.message, null, response.options);
             }).catch(error => {
@@ -98,12 +99,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             const topic = $(ev.currentTarget).data('topic');
             this._addUserMessage(topic);
             
-            rpc.query({
-                route: '/website_custom_chatbot/process_message',
-                params: { 
-                    message: topic,
-                    visitor_id: this._visitorId
-                },
+            this._rpc({
+                model: 'chatbot.message',
+                method: 'process_message',
+                args: [topic, this._visitorId],
             }).then(response => {
                 this._addBotMessage(response.message, null, response.options);
             }).catch(error => {
@@ -173,14 +172,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         _saveMessage: function (messageType, content, options = null) {
-            return rpc.query({
-                route: '/website_custom_chatbot/save_message',
-                params: { 
-                    message_type: messageType,
-                    content: content,
-                    options: options,
-                    visitor_id: this._visitorId
-                },
+            return this._rpc({
+                model: 'chatbot.message',
+                method: 'save_message',
+                args: [messageType, content, this._visitorId, options],
             }).catch(error => {
                 console.error("Error saving message:", error);
             });
@@ -206,23 +201,30 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         _closeChatbot: function () {
-            rpc.query({
-                route: '/website_custom_chatbot/clear_conversation',
-                params: { visitor_id: this._visitorId },
+            this._rpc({
+                model: 'chatbot.message',
+                method: 'clear_conversation',
+                args: [this._visitorId],
             }).then(() => {
                 this.$('.chat-window').empty();
+                // Add welcome message before hiding the chatbot
+                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", null, null, true);
                 const $chatbotContainer = this.$('.chatbot-container');
                 $chatbotContainer.addClass('hidden').removeClass('visible');
                 localStorage.setItem('chatbot_state', 'closed');
             }).catch(error => {
                 console.error("Error clearing conversation:", error);
+                // Still add welcome message even on error
+                this.$('.chat-window').empty();
+                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", null, null, true);
             });
         },
 
         _clearConversation: function () {
-            rpc.query({
-                route: '/website_custom_chatbot/clear_conversation',
-                params: { visitor_id: this._visitorId },
+            this._rpc({
+                model: 'chatbot.message',
+                method: 'clear_conversation',
+                args: [this._visitorId],
             }).then(() => {
                 this.$('.chat-window').empty();
                 this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", null, null, true);
