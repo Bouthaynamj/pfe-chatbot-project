@@ -14,7 +14,7 @@ class ChatbotMessage(models.TransientModel):
     request = fields.Text(string='Request', required=True)  
     response = fields.Text(string='Response', compute='_compute_response', precompute=True, store=True)
     session_id = fields.Char(string='Session ID', readonly=True)
-    visitor_id = fields.Char(string='Visitor ID', readonly=True)  
+    visitor_id = fields.Many2one('website.visitor', string='Visitor', readonly=True)  
     user_id = fields.Many2one(
         'res.users', 
         string='User', 
@@ -246,7 +246,6 @@ class ChatbotMessage(models.TransientModel):
             self.create({
                 'request': message,
                 'visitor_id': visitor_id,
-          
             })
             
             return response_data

@@ -16,10 +16,6 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         start: function () {
             this._visitorId = null;
-            
-            // Set initial state to closed
-            localStorage.setItem('chatbot_state', 'closed');
-            
             return this._super.apply(this, arguments).then(() => {
                 this.$('.hide-chatbot').on('click', this._hideChatbot.bind(this));
                 return this._getVisitorId().then(() => {
@@ -199,26 +195,14 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
             const $chatbotContainer = this.$('.chatbot-container');
             const isVisible = $chatbotContainer.hasClass('visible');
 
-            if (isVisible) {
-         
-                $chatbotContainer.toggleClass('hidden visible');
-                localStorage.setItem('chatbot_state', 'closed');
-            } else {
-       
-                $chatbotContainer.toggleClass('hidden visible');
-                localStorage.setItem('chatbot_state', 'open');
-                
-            
-            }
+            $chatbotContainer.toggleClass('hidden visible');
+            localStorage.setItem('chatbot_state', isVisible ? 'closed' : 'open');
         },
 
         _hideChatbot: function () {
-            // Just hide the chatbot without clearing the conversation
             const $chatbotContainer = this.$('.chatbot-container');
             $chatbotContainer.addClass('hidden').removeClass('visible');
             localStorage.setItem('chatbot_state', 'closed');
-            
-            // Don't clear the chat window or call the clear_conversation endpoint
         },
 
         _closeChatbot: function () {
@@ -227,17 +211,11 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                 params: { visitor_id: this._visitorId },
             }).then(() => {
                 this.$('.chat-window').empty();
-                // Add welcome message before hiding
-                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", null, null, true);
-                
                 const $chatbotContainer = this.$('.chatbot-container');
                 $chatbotContainer.addClass('hidden').removeClass('visible');
                 localStorage.setItem('chatbot_state', 'closed');
             }).catch(error => {
                 console.error("Error clearing conversation:", error);
-                // Still add the welcome message even if clearing fails
-                this.$('.chat-window').empty();
-                this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", null, null, true);
             });
         },
 
@@ -256,20 +234,13 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
         },
 
         _restoreChatbotState: function () {
-            // Get saved state, default to 'closed' if not set
-            const state = localStorage.getItem('chatbot_state') || 'closed';
+            const state = localStorage.getItem('chatbot_state');
             const $chatbotContainer = this.$('.chatbot-container');
 
             if (state === 'open') {
                 $chatbotContainer.removeClass('hidden').addClass('visible').css('transition', 'none');
-                // Load conversation if there is one, otherwise show welcome message
-                this._loadConversation();
             } else {
-                // Default state - chatbot is hidden
                 $chatbotContainer.addClass('hidden').removeClass('visible').css('transition', 'none');
-                
-                // Make sure the state is saved as closed
-                localStorage.setItem('chatbot_state', 'closed');
             }
         },
     });

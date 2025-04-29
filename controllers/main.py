@@ -21,15 +21,33 @@ class ChatbotController(http.Controller):
     @http.route('/website_custom_chatbot/save_message', type='json', auth='public')
     def save_message(self, message_type, content, visitor_id, options=None, **kwargs):
         """Save a message to the chat history"""
-        return {'success': True}
+        ChatbotMessage = request.env['chatbot.message'].sudo()
+        return ChatbotMessage.create({
+            'request': content if message_type == 'user' else '',
+            'response': content if message_type == 'bot' else '',
+            'visitor_id': visitor_id,
+        })
         
     @http.route('/website_custom_chatbot/get_conversation', type='json', auth='public')
     def get_conversation(self, visitor_id, **kwargs):
         """Get conversation history for a visitor"""
-        return {'messages': []}
+        messages = request.env['chatbot.message'].sudo().search([
+            ('visitor_id', '=', visitor_id)
+        ], order='create_date asc')
+        
+        return {
+            'messages': [{
+                'type': 'user' if msg.request else 'bot',
+                'content': msg.request or msg.response,
+                'date': msg.create_date
+            } for msg in messages]
+        }
         
     @http.route('/website_custom_chatbot/clear_conversation', type='json', auth='public')
     def clear_conversation(self, visitor_id, **kwargs):
         """Clear conversation history for a visitor"""
-    
+        messages = request.env['chatbot.message'].sudo().search([
+            ('visitor_id', '=', visitor_id)
+        ])
+        messages.unlink()
         return {'success': True}
