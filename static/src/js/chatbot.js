@@ -16,10 +16,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         start: function () {
             return this._super.apply(this, arguments).then(() => {
-                // Add static welcome message without options
+               
                 this._addBotMessage(
                     "👋 Hello! I'm your CraftEd Assistant. I can help you with questions about our products and services. What would you like to know?",
-                    null,  // No options initially
+                    null,  
                     true
                 );
                 return this._loadExistingConversation();
@@ -33,7 +33,7 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                 args: [[['visitor_id', '=', this.getSession().visitor_id]]],
                 kwargs: {
                     fields: ['request', 'response', 'options']
-                    // Removed order parameter to avoid "undefined" field error.
+                 
                 }
             }).then(messages => {
                 const $chatWindow = this.$('.chat-window');
