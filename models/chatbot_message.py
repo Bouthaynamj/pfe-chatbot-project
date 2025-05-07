@@ -65,7 +65,7 @@ class ChatbotMessage(models.TransientModel):
         if not message:
             return {
                 'message': "Please provide a valid message.",
-                'options': None
+                'options': json.dumps(self._get_main_topics())  # Show options on invalid message
             }
 
         message_lower = message.lower().strip()
@@ -74,7 +74,7 @@ class ChatbotMessage(models.TransientModel):
         if message_lower in ['help', 'hi', 'hello']:
             return {
                 'message': "Hello, here are some topics you can ask about:",
-                'options': json.dumps(self._get_main_topics())
+                'options': json.dumps(self._get_main_topics())  # Show options for help
             }
 
         # Check for exact topic matches
@@ -84,11 +84,11 @@ class ChatbotMessage(models.TransientModel):
                 if 'answer' in entry and message_lower in entry['answer'].lower():
                     return {
                         'message': entry['answer'],
-                        'options': None
+                        'options': None  # No options for valid answers
                     }
             return {
                 'message': f"Sorry, I couldn't find any information on {message}.",
-                'options': json.dumps(self._get_main_topics())
+                'options': json.dumps(self._get_main_topics())  # Show options when topic not found
             }
 
         # Check for question matches
@@ -102,7 +102,7 @@ class ChatbotMessage(models.TransientModel):
                         if message_lower in question.lower():
                             return {
                                 'message': topic['answer'],
-                                'options': None
+                                'options': None  # No options for valid answers
                             }
                     except Exception:
                         continue
@@ -110,5 +110,5 @@ class ChatbotMessage(models.TransientModel):
         # Fallback response
         return {
             'message': "I'm not sure I understand. Here are some topics you can ask about:",
-            'options': json.dumps(self._get_main_topics())
+            'options': json.dumps(self._get_main_topics())  # Show options for fallback
         }
