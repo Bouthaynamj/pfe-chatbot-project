@@ -18,16 +18,26 @@ class ChatbotMessage(models.TransientModel):
     @api.depends('request')
     def _compute_response(self):
         for record in self:
+            # Ensure the website visitor has a valid partner_id.
+            if record.visitor_id:
+                partner = record.visitor_id.partner_id
+                if not partner or not partner.exists():
+                    # Create a new Guest Partner record and update the visitor.
+                    new_partner = self.env['res.partner'].create({'name': 'Guest Partner'})
+                    record.visitor_id.write({'partner_id': new_partner.id})
+
             if not record.request:
                 record.response = "Please provide a valid message."
+                record.options = None
                 continue
 
-            dataset = self._load_dataset()
-            if isinstance(dataset, dict) and 'error' in dataset:
+            dataset = record._load_dataset()
+            if isinstance(dataset, dict) and dataset.get('error'):
                 record.response = "I'm having trouble accessing my knowledge base. Please try again later."
+                record.options = None
                 continue
 
-            response = self._process_user_message(record.request, dataset)
+            response = record._process_user_message(record.request, dataset)
             record.response = response.get('message', "I couldn't understand your question.")
             record.options = response.get('options')
 
@@ -65,33 +75,18 @@ class ChatbotMessage(models.TransientModel):
         if not message:
             return {
                 'message': "Please provide a valid message.",
-                'options': json.dumps(self._get_main_topics())  
+                'options': None
             }
 
         message_lower = message.lower().strip()
-        
-        
+
         if message_lower in ['help', 'hi', 'hello']:
             return {
-                'message': "Hello, here are some topics you can ask about:",
-                'options': json.dumps(self._get_main_topics())  
+                'message': "👋 Hello! I'm your CraftEd Assistant. I can help you with questions about our products and services. What would you like to know?",
+                'options': None
             }
 
-        # Check for exact topic matches
-        main_topics = [topic.lower() for topic in self._get_main_topics()]
-        if message_lower in main_topics:
-            for entry in dataset:
-                if 'answer' in entry and message_lower in entry['answer'].lower():
-                    return {
-                        'message': entry['answer'],
-                        'options': None  
-                    }
-            return {
-                'message': f"Sorry, I couldn't find any information on {message}.",
-                'options': json.dumps(self._get_main_topics())  
-            }
-
-        # Check for question matches
+        # Check for question matches first
         for topic in dataset:
             if not isinstance(topic, dict):
                 continue
@@ -102,12 +97,13 @@ class ChatbotMessage(models.TransientModel):
                         if message_lower in question.lower():
                             return {
                                 'message': topic['answer'],
-                                'options': None  
+                                'options': None
                             }
                     except Exception:
                         continue
 
+        # If no match found, show topics
         return {
             'message': "I'm not sure I understand. Here are some topics you can ask about:",
-            'options': json.dumps(self._get_main_topics())  
+            'options': json.dumps(self._get_main_topics())
         }

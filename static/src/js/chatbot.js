@@ -16,10 +16,10 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
 
         start: function () {
             return this._super.apply(this, arguments).then(() => {
-               
+                // Show welcome message without options
                 this._addBotMessage(
                     "👋 Hello! I'm your CraftEd Assistant. I can help you with questions about our products and services. What would you like to know?",
-                    null,  
+                    null,
                     true
                 );
                 return this._loadExistingConversation();
@@ -33,12 +33,19 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                 args: [[['visitor_id', '=', this.getSession().visitor_id]]],
                 kwargs: {
                     fields: ['request', 'response', 'options']
-                 
                 }
             }).then(messages => {
                 const $chatWindow = this.$('.chat-window');
                 $chatWindow.empty();
 
+                // Always show welcome message first
+                this._addBotMessage(
+                    "👋 Hello! I'm your CraftEd Assistant. I can help you with questions about our products and services. What would you like to know?",
+                    null,
+                    true
+                );
+
+                // Then append existing conversation if any
                 if (messages && messages.length > 0) {
                     messages.forEach(msg => {
                         if (msg.request) {
@@ -49,9 +56,6 @@ odoo.define('website_custom_chatbot.chatbot', function (require) {
                             this._addBotMessage(msg.response, options, true);
                         }
                     });
-                } else {
-                    this._addBotMessage("Hi, I can help with your ERP questions. How can I assist you today?", 
-                        this._getDefaultOptions(), true);
                 }
             });
         },
