@@ -1,4 +1,3 @@
-
 [
   {
     "topic": "CraftSchoolship Overview",
@@ -12,9 +11,22 @@
       "How does CraftSchoolship support educational institutions?",
       "What are the key features of CraftSchoolship?",
       "What makes CraftSchoolship unique?",
-      "How does CraftSchoolship enhance the educational experience?"
+      "How does CraftSchoolship enhance the educational experience?",
+      "Que fait CraftSchoolship ?",
+      "Pouvez-vous expliquer l'objectif principal de CraftSchoolship ?",
+      "Quel est l'objectif principal de CraftSchoolship ?",
+      "Comment CraftSchoolship aide-t-il les éducateurs ?",
+      "Quels services CraftSchoolship fournit-il aux écoles ?",
+      "Quelle est la mission de CraftSchoolship ?",
+      "Comment CraftSchoolship soutient-il les établissements d'enseignement ?",
+      "Quelles sont les principales caractéristiques de CraftSchoolship ?",
+      "Qu'est-ce qui rend CraftSchoolship unique ?",
+      "Comment CraftSchoolship améliore-t-il l'expérience éducative ?"
     ],
-    "answer": "CraftSchoolship allows educators to concentrate on teaching and student engagement by managing all the technical aspects. It offers personalized solutions to cater to the unique requirements of each school, enhancing the overall educational experience, and provides 24/7 support to ensure seamless integration and ongoing assistance."
+    "answer": {
+      "en": "CraftSchoolship allows educators to concentrate on teaching and student engagement by managing all the technical aspects. It offers personalized solutions to cater to the unique requirements of each school, enhancing the overall educational experience, and provides 24/7 support to ensure seamless integration and ongoing assistance.",
+      "fr": "CraftSchoolship permet aux éducateurs de se concentrer sur l'enseignement et l'engagement des étudiants en gérant tous les aspects techniques. Il propose des solutions personnalisées pour répondre aux besoins uniques de chaque école, améliorant ainsi l'expérience éducative globale, et fournit un support 24/7 pour assurer une intégration transparente et une assistance continue."
+    }
   },
   {
     "topic": "CraftEd ERP",
@@ -28,9 +40,22 @@
       "How does CraftEd ERP support school administration?",
       "What are the benefits of using CraftEd ERP?",
       "How does CraftEd ERP handle student portals?",
-      "What kind of resources can be managed with CraftEd ERP?"
+      "What kind of resources can be managed with CraftEd ERP?",
+      "Qu'est-ce que CraftEd ERP ?",
+      "Pouvez-vous me parler du système ERP proposé par CraftSchoolship ?",
+      "Comment CraftEd ERP aide-t-il à gérer les établissements d'enseignement ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il ?",
+      "Comment CraftEd ERP peut-il aider à gérer les données des étudiants ?",
+      "Quel est le but de CraftEd ERP ?",
+      "Comment CraftEd ERP soutient-il l'administration scolaire ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP ?",
+      "Comment CraftEd ERP gère-t-il les portails étudiants ?",
+      "Quels types de ressources peuvent être gérés avec CraftEd ERP ?"
     ],
-    "answer": "CraftEd ERP is an Enterprise Resource Planning tool to help manage educational institutes and provide a portal for students to access their data. It supports managing education resources like students, teachers, levels & classes, subjects, and academic years/terms."
+    "answer": {
+      "en": "CraftEd ERP is an Enterprise Resource Planning tool to help manage educational institutes and provide a portal for students to access their data. It supports managing education resources like students, teachers, levels & classes, subjects, and academic years/terms.",
+      "fr": "CraftEd ERP est un outil de planification des ressources d'entreprise pour aider à gérer les établissements d'enseignement et fournir un portail permettant aux étudiants d'accéder à leurs données. Il prend en charge la gestion des ressources éducatives telles que les étudiants, les enseignants, les niveaux et classes, les matières et les années/trimestres académiques."
+    }
   },
   {
     "topic": "CraftEd LMS",
@@ -44,9 +69,22 @@
       "How does CraftEd LMS handle course management?",
       "What are the advantages of using CraftEd LMS?",
       "How does CraftEd LMS facilitate online education?",
-      "What types of activities can be created in CraftEd LMS?"
+      "What types of activities can be created in CraftEd LMS?",
+      "Qu'est-ce que CraftEd LMS ?",
+      "Pouvez-vous expliquer le système de gestion de l'apprentissage de CraftSchoolship ?",
+      "Comment CraftEd LMS prend-il en charge l'apprentissage en ligne ?",
+      "Quelles sont les principales fonctionnalités de CraftEd LMS ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd LMS pour créer des cours ?",
+      "Quels outils CraftEd LMS offre-t-il pour l'engagement des étudiants ?",
+      "Comment CraftEd LMS gère-t-il la gestion des cours ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS ?",
+      "Comment CraftEd LMS facilite-t-il l'éducation en ligne ?",
+      "Quels types d'activités peuvent être créés dans CraftEd LMS ?"
     ],
-    "answer": "CraftEd LMS is an E-Learning Management System to help provide online courses to learners. It supports diverse learning paths and enables comprehensive customization of course structures and activities."
+    "answer": {
+      "en": "CraftEd LMS is an E-Learning Management System to help provide online courses to learners. It supports diverse learning paths and enables comprehensive customization of course structures and activities.",
+      "fr": "CraftEd LMS est un système de gestion de l'apprentissage en ligne pour aider à fournir des cours en ligne aux apprenants. Il prend en charge divers parcours d'apprentissage et permet une personnalisation complète des structures de cours et des activités."
+    }
   },
   {
     "topic": "CraftEd Chat",
@@ -60,9 +98,22 @@
       "How can users communicate through CraftEd Chat?",
       "What kind of messaging options are available in CraftEd Chat?",
       "How does CraftEd Chat support team collaboration?",
-      "What makes CraftEd Chat effective for educational institutions?"
+      "What makes CraftEd Chat effective for educational institutions?",
+      "Qu'est-ce que CraftEd Chat ?",
+      "Comment fonctionne le système de messagerie dans CraftSchoolship ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il ?",
+      "Pouvez-vous expliquer les outils de communication dans CraftEd Chat ?",
+      "Comment CraftEd Chat facilite-t-il la communication entre les utilisateurs ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat ?",
+      "Comment les utilisateurs peuvent-ils communiquer via CraftEd Chat ?",
+      "Quels types d'options de messagerie sont disponibles dans CraftEd Chat ?",
+      "Comment CraftEd Chat prend-il en charge la collaboration en équipe ?",
+      "Qu'est-ce qui rend CraftEd Chat efficace pour les établissements d'enseignement ?"
     ],
-    "answer": "CraftEd Chat is a Messaging System that allows users to communicate through direct messages and channels. It provides real-time messaging with threaded conversations for organized discussions."
+    "answer": {
+      "en": "CraftEd Chat is a Messaging System that allows users to communicate through direct messages and channels. It provides real-time messaging with threaded conversations for organized discussions.",
+      "fr": "CraftEd Chat est un système de messagerie qui permet aux utilisateurs de communiquer via des messages directs et des canaux. Il fournit une messagerie en temps réel avec des conversations organisées en fils de discussion."
+    }
   },
   {
     "topic": "CraftEd Meet",
@@ -76,9 +127,22 @@
       "How does CraftEd Meet handle session recording?",
       "What are the benefits of using CraftEd Meet?",
       "How does CraftEd Meet enhance online learning?",
-      "What makes CraftEd Meet suitable for educational purposes?"
+      "What makes CraftEd Meet suitable for educational purposes?",
+      "Qu'est-ce que CraftEd Meet ?",
+      "Pouvez-vous décrire l'outil de visioconférence de CraftSchoolship ?",
+      "Comment CraftEd Meet prend-il en charge les sessions en ligne ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour les salles de classe virtuelles ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd Meet pour enseigner ?",
+      "Quels sont les outils interactifs dans CraftEd Meet ?",
+      "Comment CraftEd Meet gère-t-il l'enregistrement des sessions ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet ?",
+      "Comment CraftEd Meet améliore-t-il l'apprentissage en ligne ?",
+      "Qu'est-ce qui rend CraftEd Meet adapté à des fins éducatives ?"
     ],
-    "answer": "CraftEd Meet is a Video Conferencing tool that helps host online sessions with whiteboard capabilities, quick chat, polls, and recording. It is designed specifically for online learning, offering an intuitive interface tailored for educators and learners."
+    "answer": {
+      "en": "CraftEd Meet is a Video Conferencing tool that helps host online sessions with whiteboard capabilities, quick chat, polls, and recording. It is designed specifically for online learning, offering an intuitive interface tailored for educators and learners.",
+      "fr": "CraftEd Meet est un outil de visioconférence qui permet d'organiser des sessions en ligne avec des fonctionnalités de tableau blanc, de chat rapide, de sondages et d'enregistrement. Il est conçu spécifiquement pour l'apprentissage en ligne, offrant une interface intuitive adaptée aux éducateurs et aux apprenants."
+    }
   },
   {
     "topic": "CraftEd AI",
@@ -92,9 +156,22 @@
       "What kind of content can CraftEd AI produce?",
       "How does CraftEd AI support course development?",
       "What are the benefits of using CraftEd AI?",
-      "How does CraftEd AI enhance the learning experience?"
+      "How does CraftEd AI enhance the learning experience?",
+      "Qu'est-ce que CraftEd AI ?",
+      "Comment fonctionne l'outil d'IA de CraftSchoolship ?",
+      "Que peut générer CraftEd AI pour les cours ?",
+      "Comment CraftEd AI aide-t-il à la création de contenu ?",
+      "Quelles sont les fonctionnalités de CraftEd AI ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd AI pour créer des leçons ?",
+      "Quel type de contenu CraftEd AI peut-il produire ?",
+      "Comment CraftEd AI prend-il en charge le développement des cours ?",
+      "Quels sont les avantages d'utiliser CraftEd AI ?",
+      "Comment CraftEd AI améliore-t-il l'expérience d'apprentissage ?"
     ],
-    "answer": "CraftEd AI is an AI Tool to generate content for courses from a simple prompt, such as generating lessons, quizzes, and images in a few clicks. It supports creating comprehensive lessons, dynamic quizzes, and context-specific images."
+    "answer": {
+      "en": "CraftEd AI is an AI Tool to generate content for courses from a simple prompt, such as generating lessons, quizzes, and images in a few clicks. It supports creating comprehensive lessons, dynamic quizzes, and context-specific images.",
+      "fr": "CraftEd AI est un outil d'IA pour générer du contenu pour les cours à partir d'une simple invite, comme générer des leçons, des quiz et des images en quelques clics. Il prend en charge la création de leçons complètes, de quiz dynamiques et d'images spécifiques au contexte."
+    }
   },
   {
     "topic": "CraftEd Mobile",
@@ -108,9 +185,22 @@
       "How does CraftEd Mobile integrate with other CraftSchoolship products?",
       "What makes CraftEd Mobile convenient for users?",
       "How does CraftEd Mobile enhance accessibility?",
-      "What kind of access does CraftEd Mobile provide?"
+      "What kind of access does CraftEd Mobile provide?",
+      "Qu'est-ce que CraftEd Mobile ?",
+      "Pouvez-vous expliquer l'application mobile de CraftSchoolship ?",
+      "Comment CraftEd Mobile prend-il en charge les apprenants ?",
+      "Quelles fonctionnalités CraftEd Mobile offre-t-il ?",
+      "Comment les étudiants peuvent-ils utiliser CraftEd Mobile ?",
+      "Quels sont les avantages d'utiliser CraftEd Mobile ?",
+      "Comment CraftEd Mobile s'intègre-t-il avec les autres produits CraftSchoolship ?",
+      "Qu'est-ce qui rend CraftEd Mobile pratique pour les utilisateurs ?",
+      "Comment CraftEd Mobile améliore-t-il l'accessibilité ?",
+      "Quel type d'accès CraftEd Mobile fournit-il ?"
     ],
-    "answer": "CraftEd Mobile is an All-in-one mobile app for learners to have simplified access to most of CraftSchoolship's products, including ERP, LMS, and Chat. It provides a seamless experience for students and educators on the go."
+    "answer": {
+      "en": "CraftEd Mobile is an All-in-one mobile app for learners to have simplified access to most of CraftSchoolship's products, including ERP, LMS, and Chat. It provides a seamless experience for students and educators on the go.",
+      "fr": "CraftEd Mobile est une application mobile tout-en-un permettant aux apprenants d'avoir un accès simplifié à la plupart des produits de CraftSchoolship, y compris ERP, LMS et Chat. Il offre une expérience transparente aux étudiants et aux éducateurs en déplacement."
+    }
   },
   {
     "topic": "CraftEd Workspace",
@@ -124,9 +214,22 @@
       "What makes CraftEd Workspace effective for educational institutions?",
       "How does CraftEd Workspace support seamless access?",
       "What kind of tools are available in CraftEd Workspace?",
-      "How does CraftEd Workspace enhance productivity?"
+      "How does CraftEd Workspace enhance productivity?",
+      "Qu'est-ce que CraftEd Workspace ?",
+      "Comment fonctionne la plateforme web de CraftSchoolship ?",
+      "Quelles fonctionnalités CraftEd Workspace offre-t-il ?",
+      "Comment les instituts peuvent-ils utiliser CraftEd Workspace ?",
+      "Quels sont les avantages d'utiliser CraftEd Workspace ?",
+      "Comment CraftEd Workspace s'intègre-t-il avec d'autres produits ?",
+      "Qu'est-ce qui rend CraftEd Workspace efficace pour les établissements d'enseignement ?",
+      "Comment CraftEd Workspace prend-il en charge un accès transparent ?",
+      "Quels types d'outils sont disponibles dans CraftEd Workspace ?",
+      "Comment CraftEd Workspace améliore-t-il la productivité ?"
     ],
-    "answer": "CraftEd Workspace is an All-in-one web platform for institutes to have seamless access to all CraftSchoolship products. It provides a centralized platform for managing educational resources and tools."
+    "answer": {
+      "en": "CraftEd Workspace is an All-in-one web platform for institutes to have seamless access to all CraftSchoolship products. It provides a centralized platform for managing educational resources and tools.",
+      "fr": "CraftEd Workspace est une plateforme web tout-en-un permettant aux instituts d'avoir un accès transparent à tous les produits CraftSchoolship. Il fournit une plateforme centralisée pour gérer les ressources et outils éducatifs."
+    }
   },
   {
     "topic": "CraftEd Universe",
@@ -140,9 +243,22 @@
       "How does CraftEd Universe handle multi-tenant support?",
       "What are the advantages of using CraftEd Universe?",
       "How does CraftEd Universe improve efficiency?",
-      "What kind of performance enhancements does CraftEd Universe provide?"
+      "What kind of performance enhancements does CraftEd Universe provide?",
+      "Qu'est-ce que CraftEd Universe ?",
+      "Pouvez-vous décrire l'espace de travail distribué de CraftSchoolship ?",
+      "Comment CraftEd Universe prend-il en charge des performances améliorées ?",
+      "Quelles fonctionnalités CraftEd Universe offre-t-il ?",
+      "Comment les établissements d'enseignement peuvent-ils bénéficier de CraftEd Universe ?",
+      "Qu'est-ce qui rend CraftEd Universe adapté aux opérations à grande échelle ?",
+      "Comment CraftEd Universe gère-t-il la prise en charge multi-locataire ?",
+      "Quels sont les avantages d'utiliser CraftEd Universe ?",
+      "Comment CraftEd Universe améliore-t-il l'efficacité ?",
+      "Quels types d'améliorations de performance CraftEd Universe fournit-il ?"
     ],
-    "answer": "CraftEd Universe is a distributed heavy-duty workspace designed for enhanced performance, with potential support for multi-tenants. It is suitable for large-scale educational institutions requiring robust and scalable solutions."
+    "answer": {
+      "en": "CraftEd Universe is a distributed heavy-duty workspace designed for enhanced performance, with potential support for multi-tenants. It is suitable for large-scale educational institutions requiring robust and scalable solutions.",
+      "fr": "CraftEd Universe est un espace de travail distribué robuste conçu pour des performances améliorées, avec un support potentiel pour plusieurs locataires. Il convient aux grandes institutions éducatives nécessitant des solutions robustes et évolutives."
+    }
   },
   {
     "topic": "CraftEd ERP Education Management",
@@ -156,9 +272,22 @@
       "What kind of student data can be managed with CraftEd ERP?",
       "How does CraftEd ERP support elective and exempted subjects?",
       "What are the key features of CraftEd ERP for education?",
-      "How does CraftEd ERP enhance the management of educational resources?"
+      "How does CraftEd ERP enhance the management of educational resources?",
+      "Comment CraftEd ERP gère-t-il les ressources éducatives ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion de l'éducation ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les étudiants et les enseignants ?",
+      "Comment CraftEd ERP prend-il en charge les différents départements ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion de l'éducation ?",
+      "Comment CraftEd ERP gère-t-il les années et trimestres académiques ?",
+      "Quel type de données étudiantes peut être géré avec CraftEd ERP ?",
+      "Comment CraftEd ERP prend-il en charge les matières optionnelles et exemptées ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour l'éducation ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des ressources éducatives ?"
     ],
-    "answer": "CraftEd ERP allows managing education resources like students, teachers, levels & classes, subjects, and academic years/terms. It supports different departments and learning paths, and students can have elective and/or exempted subjects."
+    "answer": {
+      "en": "CraftEd ERP allows managing education resources like students, teachers, levels & classes, subjects, and academic years/terms. It supports different departments and learning paths, and students can have elective and/or exempted subjects.",
+      "fr": "CraftEd ERP permet de gérer des ressources éducatives telles que les étudiants, les enseignants, les niveaux et classes, les matières et les années/trimestres académiques. Il prend en charge différents départements et parcours d'apprentissage, et les étudiants peuvent avoir des matières optionnelles et/ou exemptées."
+    }
   },
   {
     "topic": "CraftEd ERP Admissions",
@@ -172,9 +301,22 @@
       "What kind of constraints can be defined in CraftEd ERP for admissions?",
       "How does CraftEd ERP automate email communication for admissions?",
       "What are the key features of CraftEd ERP for admissions?",
-      "How does CraftEd ERP enhance the admission process?"
+      "How does CraftEd ERP enhance the admission process?",
+      "Comment CraftEd ERP gère-t-il les admissions ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des admissions ?",
+      "Pouvez-vous expliquer le processus d'admission dans CraftEd ERP ?",
+      "Comment CraftEd ERP prend-il en charge les formulaires d'admission en ligne ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP gère-t-il l'examen des candidatures ?",
+      "Quels types de contraintes peuvent être définis dans CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP automatise-t-il la communication par e-mail pour les admissions ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP améliore-t-il le processus d'admission ?"
     ],
-    "answer": "CraftEd ERP provides an online form with anti-bot protection and an admission dashboard with built-in automated email communication. It allows managing applications with an intuitive UI and defining constraints like minimum age or number of seats."
+    "answer": {
+      "en": "CraftEd ERP provides an online form with anti-bot protection and an admission dashboard with built-in automated email communication. It allows managing applications with an intuitive UI and defining constraints like minimum age or number of seats.",
+      "fr": "CraftEd ERP fournit un formulaire en ligne avec protection anti-robot et un tableau de bord d'admission avec communication automatisée par e-mail intégrée. Il permet de gérer les candidatures avec une interface intuitive et de définir des contraintes comme l'âge minimum ou le nombre de places."
+    }
   },
   {
     "topic": "CraftEd ERP Classroom Management",
@@ -188,9 +330,22 @@
       "What kind of information does CraftEd ERP provide about classrooms?",
       "How does CraftEd ERP enhance classroom organization?",
       "What are the key features of CraftEd ERP for classrooms?",
-      "How does CraftEd ERP improve classroom management?"
+      "How does CraftEd ERP improve classroom management?",
+      "Comment CraftEd ERP gère-t-il les salles de classe ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des salles de classe ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les ressources des salles de classe ?",
+      "Comment CraftEd ERP prend-il en charge la planification des salles de classe ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des salles de classe ?",
+      "Comment CraftEd ERP gère-t-il l'équipement des salles de classe ?",
+      "Quel type d'informations CraftEd ERP fournit-il sur les salles de classe ?",
+      "Comment CraftEd ERP améliore-t-il l'organisation des salles de classe ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les salles de classe ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des salles de classe ?"
     ],
-    "answer": "The Classroom feature in CraftEd ERP allows managing classrooms with information like capacity and equipment. It helps in better planning of teaching by assigning classrooms and managing equipment."
+    "answer": {
+      "en": "The Classroom feature in CraftEd ERP allows managing classrooms with information like capacity and equipment. It helps in better planning of teaching by assigning classrooms and managing equipment.",
+      "fr": "La fonctionnalité Salle de classe dans CraftEd ERP permet de gérer les salles de classe avec des informations comme la capacité et l'équipement. Elle aide à une meilleure planification de l'enseignement en attribuant des salles de classe et en gérant l'équipement."
+    }
   },
   {
     "topic": "CraftEd ERP Timetable Management",
@@ -204,9 +359,22 @@
       "What kind of notifications does CraftEd ERP provide for timetables?",
       "How does CraftEd ERP enhance timetable planning?",
       "What are the key features of CraftEd ERP for timetables?",
-      "How does CraftEd ERP improve timetable management?"
+      "How does CraftEd ERP improve timetable management?",
+      "Comment CraftEd ERP gère-t-il les emplois du temps ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des emplois du temps ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la planification des sessions ?",
+      "Comment CraftEd ERP prend-il en charge la génération de sessions multiples ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des emplois du temps ?",
+      "Comment CraftEd ERP gère-t-il les conflits de sessions ?",
+      "Quels types de notifications CraftEd ERP fournit-il pour les emplois du temps ?",
+      "Comment CraftEd ERP améliore-t-il la planification des emplois du temps ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les emplois du temps ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des emplois du temps ?"
     ],
-    "answer": "CraftEd ERP provides multisession generation and built-in email notifications for timetable management. It ensures no conflicts between sessions and allows color coding, recurring sessions, and integration with video conferencing tools."
+    "answer": {
+      "en": "CraftEd ERP provides multisession generation and built-in email notifications for timetable management. It ensures no conflicts between sessions and allows color coding, recurring sessions, and integration with video conferencing tools.",
+      "fr": "CraftEd ERP fournit une génération de sessions multiples et des notifications par e-mail intégrées pour la gestion des emplois du temps. Il garantit l'absence de conflits entre les sessions et permet un codage couleur, des sessions récurrentes et une intégration avec les outils de visioconférence."
+    }
   },
   {
     "topic": "CraftEd ERP Attendance Management",
@@ -220,9 +388,22 @@
       "What kind of flexibility does CraftEd ERP provide for attendance?",
       "How does CraftEd ERP enhance attendance tracking?",
       "What are the key features of CraftEd ERP for attendance?",
-      "How does CraftEd ERP improve attendance management?"
+      "How does CraftEd ERP improve attendance management?",
+      "Comment CraftEd ERP gère-t-il les présences ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des présences ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la présence des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge la présence par code QR ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des présences ?",
+      "Comment CraftEd ERP gère-t-il les rapports de présence ?",
+      "Quel type de flexibilité CraftEd ERP offre-t-il pour les présences ?",
+      "Comment CraftEd ERP améliore-t-il le suivi des présences ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les présences ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des présences ?"
     ],
-    "answer": "The Attendance feature in CraftEd ERP provides QR Code attendance for modern learning. It allows taking attendance with flexibility and generating attendance reports."
+    "answer": {
+      "en": "The Attendance feature in CraftEd ERP provides QR Code attendance for modern learning. It allows taking attendance with flexibility and generating attendance reports.",
+      "fr": "La fonctionnalité Présence dans CraftEd ERP fournit une présence par code QR pour un apprentissage moderne. Elle permet de prendre les présences avec flexibilité et de générer des rapports de présence."
+    }
   },
   {
     "topic": "CraftEd ERP Tuition Management",
@@ -236,9 +417,22 @@
       "What kind of billing contacts does CraftEd ERP support?",
       "How does CraftEd ERP enhance tuition fee management?",
       "What are the key features of CraftEd ERP for tuition?",
-      "How does CraftEd ERP improve tuition management?"
+      "How does CraftEd ERP improve tuition management?",
+      "Comment CraftEd ERP gère-t-il les frais de scolarité ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des frais de scolarité ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la facturation des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge la facturation basée sur les préférences ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des frais de scolarité ?",
+      "Comment CraftEd ERP gère-t-il le suivi des paiements ?",
+      "Quels types de contacts de facturation CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des frais de scolarité ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les frais de scolarité ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des frais de scolarité ?"
     ],
-    "answer": "CraftEd ERP manages student tuition fees and bills with preference-based invoicing, different billing contacts, and integration with online payment providers like PayPal."
+    "answer": {
+      "en": "CraftEd ERP manages student tuition fees and bills with preference-based invoicing, different billing contacts, and integration with online payment providers like PayPal.",
+      "fr": "CraftEd ERP gère les frais de scolarité et les factures des étudiants avec une facturation basée sur les préférences, différents contacts de facturation et une intégration avec des fournisseurs de paiement en ligne comme PayPal."
+    }
   },
   {
     "topic": "CraftEd ERP Grading Management",
@@ -252,9 +446,22 @@
       "What kind of grading criteria does CraftEd ERP support?",
       "How does CraftEd ERP enhance grading processes?",
       "What are the key features of CraftEd ERP for grading?",
-      "How does CraftEd ERP improve grading management?"
+      "How does CraftEd ERP improve grading management?",
+      "Comment CraftEd ERP gère-t-il les notes ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des notes ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les notes des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge différents systèmes de notation ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des notes ?",
+      "Comment CraftEd ERP gère-t-il les sessions d'examen ?",
+      "Quels types de critères de notation CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il les processus de notation ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les notes ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des notes ?"
     ],
-    "answer": "The Grading feature in CraftEd ERP provides enhanced reporting and supports different grading systems. It allows managing exam sessions, grading criteria, and generating stats and reports."
+    "answer": {
+      "en": "The Grading feature in CraftEd ERP provides enhanced reporting and supports different grading systems. It allows managing exam sessions, grading criteria, and generating stats and reports.",
+      "fr": "La fonctionnalité Notation dans CraftEd ERP fournit des rapports améliorés et prend en charge différents systèmes de notation. Elle permet de gérer les sessions d'examen, les critères de notation et de générer des statistiques et des rapports."
+    }
   },
   {
     "topic": "CraftEd ERP External User Management",
@@ -268,58 +475,24 @@
       "What kind of identity providers does CraftEd ERP support?",
       "How does CraftEd ERP enhance user management?",
       "What are the key features of CraftEd ERP for external user management?",
-      "How does CraftEd ERP improve external user management?"
+      "How does CraftEd ERP improve external user management?",
+      "Comment CraftEd ERP gère-t-il la gestion des utilisateurs externes ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des utilisateurs externes ?",
+      "Pouvez-vous expliquer comment CraftEd ERP s'intègre avec les fournisseurs d'identité ?",
+      "Comment CraftEd ERP prend-il en charge l'authentification unique (SSO) ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des utilisateurs externes ?",
+      "Comment CraftEd ERP gère-t-il la création de comptes utilisateurs ?",
+      "Quels types de fournisseurs d'identité CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des utilisateurs ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour la gestion des utilisateurs externes ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des utilisateurs externes ?"
     ],
-    "answer": "The External User Management feature in CraftEd ERP allows creating accounts for students, teachers, and parents directly on identity providers like Google, Microsoft, or AWS. It supports Single Sign-On (SSO) for seamless user access."
+    "answer": {
+      "en": "The External User Management feature in CraftEd ERP allows creating accounts for students, teachers, and parents directly on identity providers like Google, Microsoft, or AWS. It supports Single Sign-On (SSO) for seamless user access.",
+      "fr": "La fonctionnalité Gestion des utilisateurs externes dans CraftEd ERP permet de créer des comptes pour les étudiants, les enseignants et les parents directement sur des fournisseurs d'identité comme Google, Microsoft ou AWS. Elle prend en charge l'authentification unique (SSO) pour un accès utilisateur transparent."
+    }
   },
-  {
-    "topic": "CraftEd ERP Interoperability with LMS",
-    "questions": [
-      "How does CraftEd ERP integrate with LMS?",
-      "What features does CraftEd ERP offer for LMS integration?",
-      "Can you explain how CraftEd ERP syncs with LMS?",
-      "How does CraftEd ERP support seamless data integration with LMS?",
-      "What are the benefits of using CraftEd ERP with LMS?",
-      "How does CraftEd ERP handle resource synchronization with LMS?",
-      "What kind of data can be synced between CraftEd ERP and LMS?",
-      "How does CraftEd ERP enhance interoperability with LMS?",
-      "What are the key features of CraftEd ERP for LMS integration?",
-      "How does CraftEd ERP improve LMS integration?"
-    ],
-    "answer": "CraftEd ERP integrates with CraftEd LMS to sync resources like levels, users, classes, subjects, timetable sessions, attendance, and grades for seamless data integration."
-  },
-  {
-    "topic": "CraftEd ERP User Portal",
-    "questions": [
-      "How does CraftEd ERP handle user portals?",
-      "What features does CraftEd ERP offer for user portals?",
-      "Can you explain how CraftEd ERP provides access to user data?",
-      "How does CraftEd ERP support student and parent access?",
-      "What are the benefits of using CraftEd ERP for user portals?",
-      "How does CraftEd ERP handle user interactions?",
-      "What kind of data can users access through the portal?",
-      "How does CraftEd ERP enhance user portal functionality?",
-      "What are the key features of CraftEd ERP for user portals?",
-      "How does CraftEd ERP improve user portal access?"
-    ],
-    "answer": "The User Portal feature in CraftEd ERP gives students and parents access to their data, allowing them to preview attendance, grades, timetables, and invoices, and perform actions like paying bills and updating profiles."
-  },
-  {
-    "topic": "CraftEd LMS Course Management",
-    "questions": [
-      "How does CraftEd LMS manage courses?",
-      "What features does CraftEd LMS offer for course management?",
-      "Can you explain how CraftEd LMS handles course creation?",
-      "How does CraftEd LMS support diverse learning paths?",
-      "What are the benefits of using CraftEd LMS for course management?",
-      "How does CraftEd LMS handle course templates?",
-      "What kind of resources can be managed in CraftEd LMS?",
-      "How does CraftEd LMS enhance course customization?",
-      "What are the key features of CraftEd LMS for course management?",
-      "How does CraftEd LMS improve course management?"
-    ],
-    "answer": "The Course Management feature in CraftEd LMS allows creating and managing courses tailored to different levels, subjects, or topics. It supports diverse learning paths and enables comprehensive customization of course structures and activities."
-  },
+
   {
     "topic": "CraftEd LMS Activities",
     "questions": [
@@ -332,9 +505,22 @@
       "What kind of interactive tools does CraftEd LMS provide?",
       "How does CraftEd LMS enhance student engagement?",
       "What are the key features of CraftEd LMS for activities?",
-      "How does CraftEd LMS improve activity management?"
+      "How does CraftEd LMS improve activity management?",
+      "Comment CraftEd LMS gère-t-il les activités ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour les activités ?",
+      "Pouvez-vous expliquer comment CraftEd LMS prend en charge les activités interactives ?",
+      "Comment CraftEd LMS engage-t-il les étudiants avec des activités ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour les activités ?",
+      "Comment CraftEd LMS gère-t-il les quiz et les devoirs ?",
+      "Quels types d'outils interactifs CraftEd LMS fournit-il ?",
+      "Comment CraftEd LMS améliore-t-il l'engagement des étudiants ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour les activités ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des activités ?"
     ],
-    "answer": "CraftEd LMS supports activities like quizzes, forums, assignments, and workshops to engage students. It also allows incorporating external tools like H5P for interactive content creation."
+    "answer": {
+      "en": "CraftEd LMS supports activities like quizzes, forums, assignments, and workshops to engage students. It also allows incorporating external tools like H5P for interactive content creation.",
+      "fr": "CraftEd LMS prend en charge des activités comme des quiz, des forums, des devoirs et des ateliers pour engager les étudiants. Il permet également d'incorporer des outils externes comme H5P pour la création de contenu interactif."
+    }
   },
   {
     "topic": "CraftEd LMS User Management",
@@ -348,9 +534,22 @@
       "What kind of roles can be assigned in CraftEd LMS?",
       "How does CraftEd LMS enhance user management?",
       "What are the key features of CraftEd LMS for user management?",
-      "How does CraftEd LMS improve user management?"
+      "How does CraftEd LMS improve user management?",
+      "Comment CraftEd LMS gère-t-il les utilisateurs ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour la gestion des utilisateurs ?",
+      "Pouvez-vous expliquer comment CraftEd LMS gère les rôles des utilisateurs ?",
+      "Comment CraftEd LMS prend-il en charge les permissions basées sur les rôles ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour la gestion des utilisateurs ?",
+      "Comment CraftEd LMS gère-t-il les comptes utilisateurs ?",
+      "Quels types de rôles peuvent être attribués dans CraftEd LMS ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des utilisateurs ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour la gestion des utilisateurs ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des utilisateurs ?"
     ],
-    "answer": "CraftEd LMS streamlines user management with detailed role-based permissions. It allows managing user accounts, assigning roles, and tracking user activities."
+    "answer": {
+      "en": "CraftEd LMS streamlines user management with detailed role-based permissions. It allows managing user accounts, assigning roles, and tracking user activities.",
+      "fr": "CraftEd LMS simplifie la gestion des utilisateurs avec des permissions détaillées basées sur les rôles. Il permet de gérer les comptes utilisateurs, d'attribuer des rôles et de suivre les activités des utilisateurs."
+    }
   },
   {
     "topic": "CraftEd LMS Certification",
@@ -364,9 +563,22 @@
       "What kind of customization does CraftEd LMS provide for certificates?",
       "How does CraftEd LMS enhance certification processes?",
       "What are the key features of CraftEd LMS for certification?",
-      "How does CraftEd LMS improve certification management?"
+      "How does CraftEd LMS improve certification management?",
+      "Comment CraftEd LMS gère-t-il les certifications ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour la certification ?",
+      "Pouvez-vous expliquer comment CraftEd LMS génère les certificats ?",
+      "Comment CraftEd LMS prend-il en charge la certification automatisée ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour la certification ?",
+      "Comment CraftEd LMS gère-t-il les modèles de certificats ?",
+      "Quel type de personnalisation CraftEd LMS fournit-il pour les certificats ?",
+      "Comment CraftEd LMS améliore-t-il les processus de certification ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour la certification ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des certifications ?"
     ],
-    "answer": "The Certification feature in CraftEd LMS allows institutes to automate the generation of personalized certificates upon course completion. It supports custom certificate templates and secure access for students to download their certificates."
+    "answer": {
+      "en": "The Certification feature in CraftEd LMS allows institutes to automate the generation of personalized certificates upon course completion. It supports custom certificate templates and secure access for students to download their certificates.",
+      "fr": "La fonctionnalité de certification dans CraftEd LMS permet aux instituts d'automatiser la génération de certificats personnalisés à la fin des cours. Elle prend en charge des modèles de certificats personnalisés et un accès sécurisé pour les étudiants afin de télécharger leurs certificats."
+    }
   },
   {
     "topic": "CraftEd LMS Secure Exams",
@@ -380,9 +592,22 @@
       "What kind of tools does CraftEd LMS provide for exam security?",
       "How does CraftEd LMS enhance exam integrity?",
       "What are the key features of CraftEd LMS for secure exams?",
-      "How does CraftEd LMS improve exam security?"
+      "How does CraftEd LMS improve exam security?",
+      "Comment CraftEd LMS assure-t-il des examens sécurisés ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour des examens sécurisés ?",
+      "Pouvez-vous expliquer comment CraftEd LMS protège les environnements d'examen ?",
+      "Comment CraftEd LMS gère-t-il la surveillance des examens ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour des examens sécurisés ?",
+      "Comment CraftEd LMS empêche-t-il la triche pendant les examens ?",
+      "Quels types d'outils CraftEd LMS fournit-il pour la sécurité des examens ?",
+      "Comment CraftEd LMS améliore-t-il l'intégrité des examens ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour des examens sécurisés ?",
+      "Comment CraftEd LMS améliore-t-il la sécurité des examens ?"
     ],
-    "answer": "CraftEd LMS ensures secure exams by restricting browsing and unauthorized actions during online assessments. It supports Safe Exam Browser (SEB) and built-in proctoring tools."
+    "answer": {
+      "en": "CraftEd LMS ensures secure exams by restricting browsing and unauthorized actions during online assessments. It supports Safe Exam Browser (SEB) and built-in proctoring tools.",
+      "fr": "CraftEd LMS assure des examens sécurisés en restreignant la navigation et les actions non autorisées pendant les évaluations en ligne. Il prend en charge le Safe Exam Browser (SEB) et des outils de surveillance intégrés."
+    }
   },
   {
     "topic": "CraftEd LMS Grading",
@@ -396,9 +621,22 @@
       "What kind of grading criteria does CraftEd LMS support?",
       "How does CraftEd LMS enhance grading processes?",
       "What are the key features of CraftEd LMS for grading?",
-      "How does CraftEd LMS improve grading management?"
+      "How does CraftEd LMS improve grading management?",
+      "Comment CraftEd LMS gère-t-il les notes ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour les notes ?",
+      "Pouvez-vous expliquer comment CraftEd LMS gère les notes des étudiants ?",
+      "Comment CraftEd LMS prend-il en charge plusieurs systèmes de notation ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour les notes ?",
+      "Comment CraftEd LMS gère-t-il les rapports de notes ?",
+      "Quels types de critères de notation CraftEd LMS prend-il en charge ?",
+      "Comment CraftEd LMS améliore-t-il les processus de notation ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour les notes ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des notes ?"
     ],
-    "answer": "The Grading feature in CraftEd LMS simplifies the evaluation process with robust grading tools. It supports multiple grading systems and advanced reporting tools."
+    "answer": {
+      "en": "The Grading feature in CraftEd LMS simplifies the evaluation process with robust grading tools. It supports multiple grading systems and advanced reporting tools.",
+      "fr": "La fonctionnalité de notation dans CraftEd LMS simplifie le processus d'évaluation avec des outils de notation robustes. Elle prend en charge plusieurs systèmes de notation et des outils de reporting avancés."
+    }
   },
   {
     "topic": "CraftEd LMS Progress Analytics",
@@ -412,9 +650,22 @@
       "What kind of dashboards does CraftEd LMS provide?",
       "How does CraftEd LMS enhance progress tracking?",
       "What are the key features of CraftEd LMS for progress analytics?",
-      "How does CraftEd LMS improve progress analytics?"
+      "How does CraftEd LMS improve progress analytics?",
+      "Comment CraftEd LMS gère-t-il l'analyse des progrès ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour le suivi des progrès ?",
+      "Pouvez-vous expliquer comment CraftEd LMS suit les progrès des apprenants ?",
+      "Comment CraftEd LMS prend-il en charge la prise de décision avec les analyses ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour l'analyse des progrès ?",
+      "Comment CraftEd LMS identifie-t-il les apprenants en difficulté ?",
+      "Quels types de tableaux de bord CraftEd LMS fournit-il ?",
+      "Comment CraftEd LMS améliore-t-il le suivi des progrès ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour l'analyse des progrès ?",
+      "Comment CraftEd LMS améliore-t-il l'analyse des progrès ?"
     ],
-    "answer": "The Progress Analytics feature in CraftEd LMS tracks and visualizes learner progress for improved outcomes. It provides actionable insights to support decision-making and enhance student success."
+    "answer": {
+      "en": "The Progress Analytics feature in CraftEd LMS tracks and visualizes learner progress for improved outcomes. It provides actionable insights to support decision-making and enhance student success.",
+      "fr": "La fonctionnalité d'analyse des progrès dans CraftEd LMS suit et visualise les progrès des apprenants pour de meilleurs résultats. Elle fournit des informations exploitables pour soutenir la prise de décision et améliorer la réussite des étudiants."
+    }
   },
   {
     "topic": "CraftEd Chat Messaging",
@@ -428,9 +679,22 @@
       "What kind of channels does CraftEd Chat support?",
       "How does CraftEd Chat enhance communication?",
       "What are the key features of CraftEd Chat for messaging?",
-      "How does CraftEd Chat improve messaging?"
+      "How does CraftEd Chat improve messaging?",
+      "Comment CraftEd Chat gère-t-il la messagerie ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il pour la messagerie ?",
+      "Pouvez-vous expliquer comment CraftEd Chat prend en charge la communication en temps réel ?",
+      "Comment CraftEd Chat facilite-t-il les discussions organisées ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat pour la messagerie ?",
+      "Comment CraftEd Chat gère-t-il les conversations en fils ?",
+      "Quels types de canaux CraftEd Chat prend-il en charge ?",
+      "Comment CraftEd Chat améliore-t-il la communication ?",
+      "Quelles sont les principales caractéristiques de CraftEd Chat pour la messagerie ?",
+      "Comment CraftEd Chat améliore-t-il la messagerie ?"
     ],
-    "answer": "CraftEd Chat provides real-time messaging with threaded conversations for organized discussions. It allows creating public and private channels and sending direct messages."
+    "answer": {
+      "en": "CraftEd Chat provides real-time messaging with threaded conversations for organized discussions. It allows creating public and private channels and sending direct messages.",
+      "fr": "CraftEd Chat fournit une messagerie en temps réel avec des conversations en fils pour des discussions organisées. Il permet de créer des canaux publics et privés et d'envoyer des messages directs."
+    }
   },
   {
     "topic": "CraftEd Chat File Sharing",
@@ -444,9 +708,22 @@
       "What kind of files can be shared in CraftEd Chat?",
       "How does CraftEd Chat enhance file sharing?",
       "What are the key features of CraftEd Chat for file sharing?",
-      "How does CraftEd Chat improve file sharing?"
+      "How does CraftEd Chat improve file sharing?",
+      "Comment CraftEd Chat gère-t-il le partage de fichiers ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il pour le partage de fichiers ?",
+      "Pouvez-vous expliquer comment CraftEd Chat prend en charge les téléchargements de fichiers ?",
+      "Comment CraftEd Chat facilite-t-il la collaboration sur les fichiers ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat pour le partage de fichiers ?",
+      "Comment CraftEd Chat gère-t-il les aperçus de fichiers ?",
+      "Quels types de fichiers peuvent être partagés dans CraftEd Chat ?",
+      "Comment CraftEd Chat améliore-t-il le partage de fichiers ?",
+      "Quelles sont les principales caractéristiques de CraftEd Chat pour le partage de fichiers ?",
+      "Comment CraftEd Chat améliore-t-il le partage de fichiers ?"
     ],
-    "answer": "CraftEd Chat supports instant file uploads with in-message previews for images, documents, and more. It allows organizing shared files with advanced search filters and ensures secure file sharing with end-to-end encryption."
+    "answer": {
+      "en": "CraftEd Chat supports instant file uploads with in-message previews for images, documents, and more. It allows organizing shared files with advanced search filters and ensures secure file sharing with end-to-end encryption.",
+      "fr": "CraftEd Chat prend en charge les téléchargements instantanés de fichiers avec des aperçus dans les messages pour les images, documents et plus encore. Il permet d'organiser les fichiers partagés avec des filtres de recherche avancés et assure un partage de fichiers sécurisé avec un chiffrement de bout en bout."
+    }
   },
   {
     "topic": "CraftEd Chat Notifications",
@@ -460,9 +737,22 @@
       "What kind of notification options does CraftEd Chat provide?",
       "How does CraftEd Chat enhance notification management?",
       "What are the key features of CraftEd Chat for notifications?",
-      "How does CraftEd Chat improve notifications?"
+      "How does CraftEd Chat improve notifications?",
+      "Comment CraftEd Chat gère-t-il les notifications ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il pour les notifications ?",
+      "Pouvez-vous expliquer comment CraftEd Chat gère les alertes ?",
+      "Comment CraftEd Chat prend-il en charge les paramètres de notification flexibles ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat pour les notifications ?",
+      "Comment CraftEd Chat gère-t-il les alertes par mot-clé ?",
+      "Quels types d'options de notification CraftEd Chat fournit-il ?",
+      "Comment CraftEd Chat améliore-t-il la gestion des notifications ?",
+      "Quelles sont les principales caractéristiques de CraftEd Chat pour les notifications ?",
+      "Comment CraftEd Chat améliore-t-il les notifications ?"
     ],
-    "answer": "CraftEd Chat provides flexible notification settings to help manage alerts effectively. It allows customizing notifications for channels, mentions, and direct messages."
+    "answer": {
+      "en": "CraftEd Chat provides flexible notification settings to help manage alerts effectively. It allows customizing notifications for channels, mentions, and direct messages.",
+      "fr": "CraftEd Chat fournit des paramètres de notification flexibles pour aider à gérer les alertes efficacement. Il permet de personnaliser les notifications pour les canaux, les mentions et les messages directs."
+    }
   },
   {
     "topic": "CraftEd Chat Search",
@@ -476,9 +766,22 @@
       "What kind of search tools does CraftEd Chat provide?",
       "How does CraftEd Chat enhance search functionality?",
       "What are the key features of CraftEd Chat for search?",
-      "How does CraftEd Chat improve search?"
+      "How does CraftEd Chat improve search?",
+      "Comment CraftEd Chat gère-t-il la recherche ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il pour la recherche ?",
+      "Pouvez-vous expliquer comment CraftEd Chat prend en charge la recherche d'informations ?",
+      "Comment CraftEd Chat facilite-t-il la recherche avancée ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat pour la recherche ?",
+      "Comment CraftEd Chat gère-t-il les filtres de recherche ?",
+      "Quels types d'outils de recherche CraftEd Chat fournit-il ?",
+      "Comment CraftEd Chat améliore-t-il la fonctionnalité de recherche ?",
+      "Quelles sont les principales caractéristiques de CraftEd Chat pour la recherche ?",
+      "Comment CraftEd Chat améliore-t-il la recherche ?"
     ],
-    "answer": "CraftEd Chat allows finding information faster with robust search tools. It supports advanced search filters, saving frequently used searches, and organizing content with hashtags and pinned posts."
+    "answer": {
+      "en": "CraftEd Chat allows finding information faster with robust search tools. It supports advanced search filters, saving frequently used searches, and organizing content with hashtags and pinned posts.",
+      "fr": "CraftEd Chat permet de trouver des informations plus rapidement avec des outils de recherche robustes. Il prend en charge les filtres de recherche avancés, la sauvegarde des recherches fréquemment utilisées et l'organisation du contenu avec des hashtags et des messages épinglés."
+    }
   },
   {
     "topic": "CraftEd Chat Bots",
@@ -492,9 +795,22 @@
       "What kind of integrations does CraftEd Chat support?",
       "How does CraftEd Chat enhance automation?",
       "What are the key features of CraftEd Chat for bots?",
-      "How does CraftEd Chat improve bot functionality?"
+      "How does CraftEd Chat improve bot functionality?",
+      "Comment CraftEd Chat gère-t-il les bots ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il pour les bots ?",
+      "Pouvez-vous expliquer comment CraftEd Chat prend en charge l'automatisation ?",
+      "Comment CraftEd Chat facilite-t-il les intégrations tierces ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat pour les bots ?",
+      "Comment CraftEd Chat gère-t-il les tâches routinières ?",
+      "Quels types d'intégrations CraftEd Chat prend-il en charge ?",
+      "Comment CraftEd Chat améliore-t-il l'automatisation ?",
+      "Quelles sont les principales caractéristiques de CraftEd Chat pour les bots ?",
+      "Comment CraftEd Chat améliore-t-il la fonctionnalité des bots ?"
     ],
-    "answer": "CraftEd Chat supports a wide range of integrations to bring tools into one platform. It allows automating routine tasks like reminders, polls, or status updates."
+    "answer": {
+      "en": "CraftEd Chat supports a wide range of integrations to bring tools into one platform. It allows automating routine tasks like reminders, polls, or status updates.",
+      "fr": "CraftEd Chat prend en charge un large éventail d'intégrations pour rassembler les outils sur une seule plateforme. Il permet d'automatiser des tâches routinières comme des rappels, des sondages ou des mises à jour de statut."
+    }
   },
   {
     "topic": "CraftEd Meet Virtual Classrooms",
@@ -508,9 +824,22 @@
       "What kind of interactive tools does CraftEd Meet provide?",
       "How does CraftEd Meet enhance virtual classrooms?",
       "What are the key features of CraftEd Meet for virtual classrooms?",
-      "How does CraftEd Meet improve virtual classrooms?"
+      "How does CraftEd Meet improve virtual classrooms?",
+      "Comment CraftEd Meet gère-t-il les salles de classe virtuelles ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour les salles de classe virtuelles ?",
+      "Pouvez-vous expliquer comment CraftEd Meet prend en charge l'apprentissage en ligne ?",
+      "Comment CraftEd Meet facilite-t-il les cours en temps réel ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet pour les salles de classe virtuelles ?",
+      "Comment CraftEd Meet gère-t-il les salles de sous-groupes ?",
+      "Quels types d'outils interactifs CraftEd Meet fournit-il ?",
+      "Comment CraftEd Meet améliore-t-il les salles de classe virtuelles ?",
+      "Quelles sont les principales caractéristiques de CraftEd Meet pour les salles de classe virtuelles ?",
+      "Comment CraftEd Meet améliore-t-il les salles de classe virtuelles ?"
     ],
-    "answer": "CraftEd Meet creates engaging virtual classrooms with interactive tools. It allows hosting real-time online classes with minimal latency and using breakout rooms for group activities."
+    "answer": {
+      "en": "CraftEd Meet creates engaging virtual classrooms with interactive tools. It allows hosting real-time online classes with minimal latency and using breakout rooms for group activities.",
+      "fr": "CraftEd Meet crée des salles de classe virtuelles engageantes avec des outils interactifs. Il permet d'organiser des cours en ligne en temps réel avec une latence minimale et d'utiliser des salles de sous-groupes pour des activités de groupe."
+    }
   },
   {
     "topic": "CraftEd Meet Recording",
@@ -524,9 +853,22 @@
       "What kind of recording options does CraftEd Meet provide?",
       "How does CraftEd Meet enhance recording functionality?",
       "What are the key features of CraftEd Meet for recording?",
-      "How does CraftEd Meet improve recording?"
+      "How does CraftEd Meet improve recording?",
+      "Comment CraftEd Meet gère-t-il l'enregistrement ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour l'enregistrement ?",
+      "Pouvez-vous expliquer comment CraftEd Meet capture les sessions ?",
+      "Comment CraftEd Meet facilite-t-il la lecture des enregistrements ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet pour l'enregistrement ?",
+      "Comment CraftEd Meet gère-t-il la navigation indexée ?",
+      "Quels types d'options d'enregistrement CraftEd Meet fournit-il ?",
+      "Comment CraftEd Meet améliore-t-il la fonctionnalité d'enregistrement ?",
+      "Quelles sont les principales caractéristiques de CraftEd Meet pour l'enregistrement ?",
+      "Comment CraftEd Meet améliore-t-il l'enregistrement ?"
     ],
-    "answer": "CraftEd Meet allows recording sessions, including audio, video, chats, and shared content. It provides a built-in playback system and indexed navigation for recordings."
+    "answer": {
+      "en": "CraftEd Meet allows recording sessions, including audio, video, chats, and shared content. It provides a built-in playback system and indexed navigation for recordings.",
+      "fr": "CraftEd Meet permet d'enregistrer des sessions, y compris l'audio, la vidéo, les chats et le contenu partagé. Il fournit un système de lecture intégré et une navigation indexée pour les enregistrements."
+    }
   },
   {
     "topic": "CraftEd Meet Engagement Tools",
@@ -540,9 +882,22 @@
       "What kind of interactive tools does CraftEd Meet provide?",
       "How does CraftEd Meet enhance student engagement?",
       "What are the key features of CraftEd Meet for engagement?",
-      "How does CraftEd Meet improve engagement?"
+      "How does CraftEd Meet improve engagement?",
+      "Comment CraftEd Meet gère-t-il les outils d'engagement ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour l'engagement ?",
+      "Pouvez-vous expliquer comment CraftEd Meet favorise la participation ?",
+      "Comment CraftEd Meet facilite-t-il les commentaires en temps réel ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet pour l'engagement ?",
+      "Comment CraftEd Meet gère-t-il les sondages en direct ?",
+      "Quels types d'outils interactifs CraftEd Meet fournit-il ?",
+      "Comment CraftEd Meet améliore-t-il l'engagement des étudiants ?",
+      "Quelles sont les principales caractéristiques de CraftEd Meet pour l'engagement ?",
+      "Comment CraftEd Meet améliore-t-il l'engagement ?"
     ],
-    "answer": "CraftEd Meet fosters real-time participation with tools like emojis, live polling, and private or public chats. It enhances student engagement during online sessions."
+    "answer": {
+      "en": "CraftEd Meet fosters real-time participation with tools like emojis, live polling, and private or public chats. It enhances student engagement during online sessions.",
+      "fr": "CraftEd Meet favorise la participation en temps réel avec des outils comme des emojis, des sondages en direct et des chats privés ou publics. Il améliore l'engagement des étudiants pendant les sessions en ligne."
+    }
   },
   {
     "topic": "CraftEd Meet Whiteboard",
@@ -556,9 +911,22 @@
       "What kind of tools does CraftEd Meet provide for whiteboards?",
       "How does CraftEd Meet enhance teaching with whiteboards?",
       "What are the key features of CraftEd Meet for whiteboards?",
-      "How does CraftEd Meet improve whiteboard functionality?"
+      "How does CraftEd Meet improve whiteboard functionality?",
+      "Comment CraftEd Meet gère-t-il les tableaux blancs ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour les tableaux blancs ?",
+      "Pouvez-vous expliquer comment CraftEd Meet prend en charge les aides visuelles ?",
+      "Comment CraftEd Meet facilite-t-il les annotations collaboratives ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet pour les tableaux blancs ?",
+      "Comment CraftEd Meet gère-t-il le mode multi-utilisateurs ?",
+      "Quels types d'outils CraftEd Meet fournit-il pour les tableaux blancs ?",
+      "Comment CraftEd Meet améliore-t-il l'enseignement avec les tableaux blancs ?",
+      "Quelles sont les principales caractéristiques de CraftEd Meet pour les tableaux blancs ?",
+      "Comment CraftEd Meet améliore-t-il la fonctionnalité des tableaux blancs ?"
     ],
-    "answer": "CraftEd Meet enhances learning with dynamic visual aids using interactive whiteboards. It allows drawing, highlighting, and writing directly on slides during presentations and supports multi-user mode for collaborative annotations."
+    "answer": {
+      "en": "CraftEd Meet enhances learning with dynamic visual aids using interactive whiteboards. It allows drawing, highlighting, and writing directly on slides during presentations and supports multi-user mode for collaborative annotations.",
+      "fr": "CraftEd Meet améliore l'apprentissage avec des aides visuelles dynamiques utilisant des tableaux blancs interactifs. Il permet de dessiner, de surligner et d'écrire directement sur les diapositives pendant les présentations et prend en charge le mode multi-utilisateurs pour des annotations collaboratives."
+    }
   },
   {
     "topic": "CraftEd Meet Captions",
@@ -572,9 +940,22 @@
       "What kind of captioning options does CraftEd Meet provide?",
       "How does CraftEd Meet enhance accessibility?",
       "What are the key features of CraftEd Meet for captions?",
-      "How does CraftEd Meet improve captioning?"
+      "How does CraftEd Meet improve captioning?",
+      "Comment CraftEd Meet gère-t-il les sous-titres ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour les sous-titres ?",
+      "Pouvez-vous expliquer comment CraftEd Meet prend en charge le sous-titrage en temps réel ?",
+      "Comment CraftEd Meet facilite-t-il l'accessibilité avec les sous-titres ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet pour les sous-titres ?",
+      "Comment CraftEd Meet gère-t-il plusieurs langues ?",
+      "Quels types d'options de sous-titrage CraftEd Meet fournit-il ?",
+      "Comment CraftEd Meet améliore-t-il l'accessibilité ?",
+      "Quelles sont les principales caractéristiques de CraftEd Meet pour les sous-titres ?",
+      "Comment CraftEd Meet améliore-t-il le sous-titrage ?"
     ],
-    "answer": "CraftEd Meet provides real-time captioning during live sessions using advanced speech-to-text technology. It supports multiple languages and improves inclusivity for hearing-impaired participants and non-native speakers."
+    "answer": {
+      "en": "CraftEd Meet provides real-time captioning during live sessions using advanced speech-to-text technology. It supports multiple languages and improves inclusivity for hearing-impaired participants and non-native speakers.",
+      "fr": "CraftEd Meet fournit un sous-titrage en temps réel pendant les sessions en direct en utilisant une technologie avancée de reconnaissance vocale. Il prend en charge plusieurs langues et améliore l'inclusivité pour les participants malentendants et les non-natifs."
+    }
   },
   {
     "topic": "CraftEd AI Lessons",
@@ -588,9 +969,22 @@
       "What kind of lesson structures does CraftEd AI provide?",
       "How does CraftEd AI enhance lesson creation?",
       "What are the key features of CraftEd AI for lessons?",
-      "How does CraftEd AI improve lesson generation?"
+      "How does CraftEd AI improve lesson generation?",
+      "Comment CraftEd AI gère-t-il les leçons ?",
+      "Quelles fonctionnalités CraftEd AI offre-t-il pour la création de leçons ?",
+      "Pouvez-vous expliquer comment CraftEd AI génère les leçons ?",
+      "Comment CraftEd AI prend-il en charge le contenu de leçon personnalisé ?",
+      "Quels sont les avantages d'utiliser CraftEd AI pour les leçons ?",
+      "Comment CraftEd AI gère-t-il la difficulté des leçons ?",
+      "Quels types de structures de leçon CraftEd AI fournit-il ?",
+      "Comment CraftEd AI améliore-t-il la création de leçons ?",
+      "Quelles sont les principales caractéristiques de CraftEd AI pour les leçons ?",
+      "Comment CraftEd AI améliore-t-il la génération de leçons ?"
     ],
-    "answer": "CraftEd AI generates comprehensive lessons using AI based on course subjects and duration. It includes key concepts, examples, and summaries for effective understanding."
+    "answer": {
+      "en": "CraftEd AI generates comprehensive lessons using AI based on course subjects and duration. It includes key concepts, examples, and summaries for effective understanding.",
+      "fr": "CraftEd AI génère des leçons complètes en utilisant l'IA basée sur les sujets et la durée des cours. Il inclut des concepts clés, des exemples et des résumés pour une compréhension efficace."
+    }
   },
   {
     "topic": "CraftEd AI Quizzes",
@@ -604,9 +998,22 @@
       "What kind of quiz formats does CraftEd AI provide?",
       "How does CraftEd AI enhance quiz creation?",
       "What are the key features of CraftEd AI for quizzes?",
-      "How does CraftEd AI improve quiz generation?"
+      "How does CraftEd AI improve quiz generation?",
+      "Comment CraftEd AI gère-t-il les quiz ?",
+      "Quelles fonctionnalités CraftEd AI offre-t-il pour la création de quiz ?",
+      "Pouvez-vous expliquer comment CraftEd AI génère les quiz ?",
+      "Comment CraftEd AI prend-il en charge le contenu dynamique des quiz ?",
+      "Quels sont les avantages d'utiliser CraftEd AI pour les quiz ?",
+      "Comment CraftEd AI gère-t-il la difficulté des quiz ?",
+      "Quels types de formats de quiz CraftEd AI fournit-il ?",
+      "Comment CraftEd AI améliore-t-il la création de quiz ?",
+      "Quelles sont les principales caractéristiques de CraftEd AI pour les quiz ?",
+      "Comment CraftEd AI améliore-t-il la génération de quiz ?"
     ],
-    "answer": "CraftEd AI generates dynamic, auto-generated quizzes tailored to lesson content. It allows creating multiple-choice questions and setting difficulty levels."
+    "answer": {
+      "en": "CraftEd AI generates dynamic, auto-generated quizzes tailored to lesson content. It allows creating multiple-choice questions and setting difficulty levels.",
+      "fr": "CraftEd AI génère des quiz dynamiques et automatiques adaptés au contenu des leçons. Il permet de créer des questions à choix multiples et de définir des niveaux de difficulté."
+    }
   },
   {
     "topic": "CraftEd AI Images",
@@ -620,9 +1027,22 @@
       "What kind of image styles does CraftEd AI provide?",
       "How does CraftEd AI enhance visual content creation?",
       "What are the key features of CraftEd AI for images?",
-      "How does CraftEd AI improve image generation?"
+      "How does CraftEd AI improve image generation?",
+      "Comment CraftEd AI gère-t-il les images ?",
+      "Quelles fonctionnalités CraftEd AI offre-t-il pour la création d'images ?",
+      "Pouvez-vous expliquer comment CraftEd AI génère les images ?",
+      "Comment CraftEd AI prend-il en charge le contenu visuel pour les leçons ?",
+      "Quels sont les avantages d'utiliser CraftEd AI pour les images ?",
+      "Comment CraftEd AI gère-t-il la personnalisation des images ?",
+      "Quels types de styles d'images CraftEd AI fournit-il ?",
+      "Comment CraftEd AI améliore-t-il la création de contenu visuel ?",
+      "Quelles sont les principales caractéristiques de CraftEd AI pour les images ?",
+      "Comment CraftEd AI améliore-t-il la génération d'images ?"
     ],
-    "answer": "CraftEd AI generates context-specific images to complement lesson content and courses. It allows creating diagrams, infographics, and illustrations."
+    "answer": {
+      "en": "CraftEd AI generates context-specific images to complement lesson content and courses. It allows creating diagrams, infographics, and illustrations.",
+      "fr": "CraftEd AI génère des images spécifiques au contexte pour compléter le contenu des leçons et des cours. Il permet de créer des diagrammes, des infographies et des illustrations."
+    }
   },
   {
     "topic": "CraftEd AI Resources",
@@ -636,9 +1056,22 @@
       "What kind of resources does CraftEd AI provide?",
       "How does CraftEd AI enhance resource generation?",
       "What are the key features of CraftEd AI for resources?",
-      "How does CraftEd AI improve resource generation?"
+      "How does CraftEd AI improve resource generation?",
+      "Comment CraftEd AI gère-t-il les ressources ?",
+      "Quelles fonctionnalités CraftEd AI offre-t-il pour la génération de ressources ?",
+      "Pouvez-vous expliquer comment CraftEd AI génère des matériaux supplémentaires ?",
+      "Comment CraftEd AI prend-il en charge les ressources organisées ?",
+      "Quels sont les avantages d'utiliser CraftEd AI pour les ressources ?",
+      "Comment CraftEd AI gère-t-il les recommandations de ressources externes ?",
+      "Quels types de ressources CraftEd AI fournit-il ?",
+      "Comment CraftEd AI améliore-t-il la génération de ressources ?",
+      "Quelles sont les principales caractéristiques de CraftEd AI pour les ressources ?",
+      "Comment CraftEd AI améliore-t-il la génération de ressources ?"
     ],
-    "answer": "CraftEd AI generates curated supplementary materials for enhanced learning. It suggests external resources like wikis, YouTube videos, and official documentation."
+    "answer": {
+      "en": "CraftEd AI generates curated supplementary materials for enhanced learning. It suggests external resources like wikis, YouTube videos, and official documentation.",
+      "fr": "CraftEd AI génère des matériaux supplémentaires organisés pour un apprentissage amélioré. Il suggère des ressources externes comme des wikis, des vidéos YouTube et de la documentation officielle."
+    }
   },
   {
     "topic": "CraftEd AI Standalone",
@@ -652,9 +1085,22 @@
       "What kind of standalone options does CraftEd AI provide?",
       "How does CraftEd AI enhance standalone functionality?",
       "What are the key features of CraftEd AI for standalone use?",
-      "How does CraftEd AI improve standalone access?"
+      "How does CraftEd AI improve standalone access?",
+      "Comment CraftEd AI gère-t-il l'accès autonome ?",
+      "Quelles fonctionnalités CraftEd AI offre-t-il pour une utilisation autonome ?",
+      "Pouvez-vous expliquer comment CraftEd AI prend en charge la création de cours indépendants ?",
+      "Comment CraftEd AI facilite-t-il la génération de cours de bout en bout ?",
+      "Quels sont les avantages d'utiliser CraftEd AI pour un accès autonome ?",
+      "Comment CraftEd AI gère-t-il la génération de leçons individuelles ?",
+      "Quels types d'options autonomes CraftEd AI fournit-il ?",
+      "Comment CraftEd AI améliore-t-il la fonctionnalité autonome ?",
+      "Quelles sont les principales caractéristiques de CraftEd AI pour une utilisation autonome ?",
+      "Comment CraftEd AI améliore-t-il l'accès autonome ?"
     ],
-    "answer": "CraftEd AI enables direct access to create complete courses with lessons, quizzes, and visuals in one step. It supports generating entire courses end-to-end with a single input."
+    "answer": {
+      "en": "CraftEd AI enables direct access to create complete courses with lessons, quizzes, and visuals in one step. It supports generating entire courses end-to-end with a single input.",
+      "fr": "CraftEd AI permet un accès direct pour créer des cours complets avec des leçons, des quiz et des visuels en une seule étape. Il prend en charge la génération de cours entiers de bout en bout avec une seule entrée."
+    }
   },
   {
     "topic": "CraftSchoolship Overview",
@@ -668,9 +1114,22 @@
       "How does CraftSchoolship support educational institutions?",
       "What are the key features of CraftSchoolship?",
       "What makes CraftSchoolship unique?",
-      "How does CraftSchoolship enhance the educational experience?"
+      "How does CraftSchoolship enhance the educational experience?",
+      "Que fait CraftSchoolship ?",
+      "Pouvez-vous expliquer l'objectif principal de CraftSchoolship ?",
+      "Quel est l'objectif principal de CraftSchoolship ?",
+      "Comment CraftSchoolship aide-t-il les éducateurs ?",
+      "Quels services CraftSchoolship fournit-il aux écoles ?",
+      "Quelle est la mission de CraftSchoolship ?",
+      "Comment CraftSchoolship soutient-il les établissements d'enseignement ?",
+      "Quelles sont les principales caractéristiques de CraftSchoolship ?",
+      "Qu'est-ce qui rend CraftSchoolship unique ?",
+      "Comment CraftSchoolship améliore-t-il l'expérience éducative ?"
     ],
-    "answer": "CraftSchoolship allows educators to concentrate on teaching and student engagement by managing all the technical aspects. It offers personalized solutions to cater to the unique requirements of each school, enhancing the overall educational experience, and provides 24/7 support to ensure seamless integration and ongoing assistance."
+    "answer": {
+      "en": "CraftSchoolship allows educators to concentrate on teaching and student engagement by managing all the technical aspects. It offers personalized solutions to cater to the unique requirements of each school, enhancing the overall educational experience, and provides 24/7 support to ensure seamless integration and ongoing assistance.",
+      "fr": "CraftSchoolship permet aux éducateurs de se concentrer sur l'enseignement et l'engagement des étudiants en gérant tous les aspects techniques. Il propose des solutions personnalisées pour répondre aux besoins uniques de chaque école, améliorant ainsi l'expérience éducative globale, et fournit un support 24/7 pour assurer une intégration transparente et une assistance continue."
+    }
   },
   {
     "topic": "CraftEd ERP",
@@ -684,9 +1143,22 @@
       "How does CraftEd ERP support school administration?",
       "What are the benefits of using CraftEd ERP?",
       "How does CraftEd ERP handle student portals?",
-      "What kind of resources can be managed with CraftEd ERP?"
+      "What kind of resources can be managed with CraftEd ERP?",
+      "Qu'est-ce que CraftEd ERP ?",
+      "Pouvez-vous me parler du système ERP proposé par CraftSchoolship ?",
+      "Comment CraftEd ERP aide-t-il à gérer les établissements d'enseignement ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il ?",
+      "Comment CraftEd ERP peut-il aider à gérer les données des étudiants ?",
+      "Quel est le but de CraftEd ERP ?",
+      "Comment CraftEd ERP soutient-il l'administration scolaire ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP ?",
+      "Comment CraftEd ERP gère-t-il les portails étudiants ?",
+      "Quels types de ressources peuvent être gérés avec CraftEd ERP ?"
     ],
-    "answer": "CraftEd ERP is an Enterprise Resource Planning tool to help manage educational institutes and provide a portal for students to access their data. It supports managing education resources like students, teachers, levels & classes, subjects, and academic years/terms."
+    "answer": {
+      "en": "CraftEd ERP is an Enterprise Resource Planning tool to help manage educational institutes and provide a portal for students to access their data. It supports managing education resources like students, teachers, levels & classes, subjects, and academic years/terms.",
+      "fr": "CraftEd ERP est un outil de planification des ressources d'entreprise pour aider à gérer les établissements d'enseignement et fournir un portail permettant aux étudiants d'accéder à leurs données. Il prend en charge la gestion des ressources éducatives telles que les étudiants, les enseignants, les niveaux et classes, les matières et les années/trimestres académiques."
+    }
   },
   {
     "topic": "CraftEd LMS",
@@ -700,9 +1172,22 @@
       "How does CraftEd LMS handle course management?",
       "What are the advantages of using CraftEd LMS?",
       "How does CraftEd LMS facilitate online education?",
-      "What types of activities can be created in CraftEd LMS?"
+      "What types of activities can be created in CraftEd LMS?",
+      "Qu'est-ce que CraftEd LMS ?",
+      "Pouvez-vous expliquer le système de gestion de l'apprentissage de CraftSchoolship ?",
+      "Comment CraftEd LMS prend-il en charge l'apprentissage en ligne ?",
+      "Quelles sont les principales fonctionnalités de CraftEd LMS ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd LMS pour créer des cours ?",
+      "Quels outils CraftEd LMS offre-t-il pour l'engagement des étudiants ?",
+      "Comment CraftEd LMS gère-t-il la gestion des cours ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS ?",
+      "Comment CraftEd LMS facilite-t-il l'éducation en ligne ?",
+      "Quels types d'activités peuvent être créés dans CraftEd LMS ?"
     ],
-    "answer": "CraftEd LMS is an E-Learning Management System to help provide online courses to learners. It supports diverse learning paths and enables comprehensive customization of course structures and activities."
+    "answer": {
+      "en": "CraftEd LMS is an E-Learning Management System to help provide online courses to learners. It supports diverse learning paths and enables comprehensive customization of course structures and activities.",
+      "fr": "CraftEd LMS est un système de gestion de l'apprentissage en ligne pour aider à fournir des cours en ligne aux apprenants. Il prend en charge divers parcours d'apprentissage et permet une personnalisation complète des structures de cours et des activités."
+    }
   },
   {
     "topic": "CraftEd Chat",
@@ -716,9 +1201,22 @@
       "How can users communicate through CraftEd Chat?",
       "What kind of messaging options are available in CraftEd Chat?",
       "How does CraftEd Chat support team collaboration?",
-      "What makes CraftEd Chat effective for educational institutions?"
+      "What makes CraftEd Chat effective for educational institutions?",
+      "Qu'est-ce que CraftEd Chat ?",
+      "Comment fonctionne le système de messagerie dans CraftSchoolship ?",
+      "Quelles fonctionnalités CraftEd Chat offre-t-il ?",
+      "Pouvez-vous expliquer les outils de communication dans CraftEd Chat ?",
+      "Comment CraftEd Chat facilite-t-il la communication entre les utilisateurs ?",
+      "Quels sont les avantages d'utiliser CraftEd Chat ?",
+      "Comment les utilisateurs peuvent-ils communiquer via CraftEd Chat ?",
+      "Quels types d'options de messagerie sont disponibles dans CraftEd Chat ?",
+      "Comment CraftEd Chat prend-il en charge la collaboration en équipe ?",
+      "Qu'est-ce qui rend CraftEd Chat efficace pour les établissements d'enseignement ?"
     ],
-    "answer": "CraftEd Chat is a Messaging System that allows users to communicate through direct messages and channels. It provides real-time messaging with threaded conversations for organized discussions."
+    "answer": {
+      "en": "CraftEd Chat is a Messaging System that allows users to communicate through direct messages and channels. It provides real-time messaging with threaded conversations for organized discussions.",
+      "fr": "CraftEd Chat est un système de messagerie qui permet aux utilisateurs de communiquer via des messages directs et des canaux. Il fournit une messagerie en temps réel avec des conversations organisées en fils de discussion."
+    }
   },
   {
     "topic": "CraftEd Meet",
@@ -732,9 +1230,22 @@
       "How does CraftEd Meet handle session recording?",
       "What are the benefits of using CraftEd Meet?",
       "How does CraftEd Meet enhance online learning?",
-      "What makes CraftEd Meet suitable for educational purposes?"
+      "What makes CraftEd Meet suitable for educational purposes?",
+      "Qu'est-ce que CraftEd Meet ?",
+      "Pouvez-vous décrire l'outil de visioconférence de CraftSchoolship ?",
+      "Comment CraftEd Meet prend-il en charge les sessions en ligne ?",
+      "Quelles fonctionnalités CraftEd Meet offre-t-il pour les salles de classe virtuelles ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd Meet pour enseigner ?",
+      "Quels sont les outils interactifs dans CraftEd Meet ?",
+      "Comment CraftEd Meet gère-t-il l'enregistrement des sessions ?",
+      "Quels sont les avantages d'utiliser CraftEd Meet ?",
+      "Comment CraftEd Meet améliore-t-il l'apprentissage en ligne ?",
+      "Qu'est-ce qui rend CraftEd Meet adapté à des fins éducatives ?"
     ],
-    "answer": "CraftEd Meet is a Video Conferencing tool that helps host online sessions with whiteboard capabilities, quick chat, polls, and recording. It is designed specifically for online learning, offering an intuitive interface tailored for educators and learners."
+    "answer": {
+      "en": "CraftEd Meet is a Video Conferencing tool that helps host online sessions with whiteboard capabilities, quick chat, polls, and recording. It is designed specifically for online learning, offering an intuitive interface tailored for educators and learners.",
+      "fr": "CraftEd Meet est un outil de visioconférence qui permet d'organiser des sessions en ligne avec des fonctionnalités de tableau blanc, de chat rapide, de sondages et d'enregistrement. Il est conçu spécifiquement pour l'apprentissage en ligne, offrant une interface intuitive adaptée aux éducateurs et aux apprenants."
+    }
   },
   {
     "topic": "CraftEd AI",
@@ -748,9 +1259,22 @@
       "What kind of content can CraftEd AI produce?",
       "How does CraftEd AI support course development?",
       "What are the benefits of using CraftEd AI?",
-      "How does CraftEd AI enhance the learning experience?"
+      "How does CraftEd AI enhance the learning experience?",
+      "Qu'est-ce que CraftEd AI ?",
+      "Comment fonctionne l'outil d'IA de CraftSchoolship ?",
+      "Que peut générer CraftEd AI pour les cours ?",
+      "Comment CraftEd AI aide-t-il à la création de contenu ?",
+      "Quelles sont les fonctionnalités de CraftEd AI ?",
+      "Comment les éducateurs peuvent-ils utiliser CraftEd AI pour créer des leçons ?",
+      "Quel type de contenu CraftEd AI peut-il produire ?",
+      "Comment CraftEd AI prend-il en charge le développement des cours ?",
+      "Quels sont les avantages d'utiliser CraftEd AI ?",
+      "Comment CraftEd AI améliore-t-il l'expérience d'apprentissage ?"
     ],
-    "answer": "CraftEd AI is an AI Tool to generate content for courses from a simple prompt, such as generating lessons, quizzes, and images in a few clicks. It supports creating comprehensive lessons, dynamic quizzes, and context-specific images."
+    "answer": {
+      "en": "CraftEd AI is an AI Tool to generate content for courses from a simple prompt, such as generating lessons, quizzes, and images in a few clicks. It supports creating comprehensive lessons, dynamic quizzes, and context-specific images.",
+      "fr": "CraftEd AI est un outil d'IA pour générer du contenu pour les cours à partir d'une simple invite, comme générer des leçons, des quiz et des images en quelques clics. Il prend en charge la création de leçons complètes, de quiz dynamiques et d'images spécifiques au contexte."
+    }
   },
   {
     "topic": "CraftEd Mobile",
@@ -764,9 +1288,22 @@
       "How does CraftEd Mobile integrate with other CraftSchoolship products?",
       "What makes CraftEd Mobile convenient for users?",
       "How does CraftEd Mobile enhance accessibility?",
-      "What kind of access does CraftEd Mobile provide?"
+      "What kind of access does CraftEd Mobile provide?",
+      "Qu'est-ce que CraftEd Mobile ?",
+      "Pouvez-vous expliquer l'application mobile de CraftSchoolship ?",
+      "Comment CraftEd Mobile prend-il en charge les apprenants ?",
+      "Quelles fonctionnalités CraftEd Mobile offre-t-il ?",
+      "Comment les étudiants peuvent-ils utiliser CraftEd Mobile ?",
+      "Quels sont les avantages d'utiliser CraftEd Mobile ?",
+      "Comment CraftEd Mobile s'intègre-t-il avec les autres produits CraftSchoolship ?",
+      "Qu'est-ce qui rend CraftEd Mobile pratique pour les utilisateurs ?",
+      "Comment CraftEd Mobile améliore-t-il l'accessibilité ?",
+      "Quel type d'accès CraftEd Mobile fournit-il ?"
     ],
-    "answer": "CraftEd Mobile is an All-in-one mobile app for learners to have simplified access to most of CraftSchoolship's products, including ERP, LMS, and Chat. It provides a seamless experience for students and educators on the go."
+    "answer": {
+      "en": "CraftEd Mobile is an All-in-one mobile app for learners to have simplified access to most of CraftSchoolship's products, including ERP, LMS, and Chat. It provides a seamless experience for students and educators on the go.",
+      "fr": "CraftEd Mobile est une application mobile tout-en-un permettant aux apprenants d'avoir un accès simplifié à la plupart des produits de CraftSchoolship, y compris ERP, LMS et Chat. Il offre une expérience transparente aux étudiants et aux éducateurs en déplacement."
+    }
   },
   {
     "topic": "CraftEd Workspace",
@@ -780,9 +1317,22 @@
       "What makes CraftEd Workspace effective for educational institutions?",
       "How does CraftEd Workspace support seamless access?",
       "What kind of tools are available in CraftEd Workspace?",
-      "How does CraftEd Workspace enhance productivity?"
+      "How does CraftEd Workspace enhance productivity?",
+      "Qu'est-ce que CraftEd Workspace ?",
+      "Comment fonctionne la plateforme web de CraftSchoolship ?",
+      "Quelles fonctionnalités CraftEd Workspace offre-t-il ?",
+      "Comment les instituts peuvent-ils utiliser CraftEd Workspace ?",
+      "Quels sont les avantages d'utiliser CraftEd Workspace ?",
+      "Comment CraftEd Workspace s'intègre-t-il avec d'autres produits ?",
+      "Qu'est-ce qui rend CraftEd Workspace efficace pour les établissements d'enseignement ?",
+      "Comment CraftEd Workspace prend-il en charge un accès transparent ?",
+      "Quels types d'outils sont disponibles dans CraftEd Workspace ?",
+      "Comment CraftEd Workspace améliore-t-il la productivité ?"
     ],
-    "answer": "CraftEd Workspace is an All-in-one web platform for institutes to have seamless access to all CraftSchoolship products. It provides a centralized platform for managing educational resources and tools."
+    "answer": {
+      "en": "CraftEd Workspace is an All-in-one web platform for institutes to have seamless access to all CraftSchoolship products. It provides a centralized platform for managing educational resources and tools.",
+      "fr": "CraftEd Workspace est une plateforme web tout-en-un permettant aux instituts d'avoir un accès transparent à tous les produits CraftSchoolship. Il fournit une plateforme centralisée pour gérer les ressources et outils éducatifs."
+    }
   },
   {
     "topic": "CraftEd Universe",
@@ -796,9 +1346,22 @@
       "How does CraftEd Universe handle multi-tenant support?",
       "What are the advantages of using CraftEd Universe?",
       "How does CraftEd Universe improve efficiency?",
-      "What kind of performance enhancements does CraftEd Universe provide?"
+      "What kind of performance enhancements does CraftEd Universe provide?",
+      "Qu'est-ce que CraftEd Universe ?",
+      "Pouvez-vous décrire l'espace de travail distribué de CraftSchoolship ?",
+      "Comment CraftEd Universe prend-il en charge des performances améliorées ?",
+      "Quelles fonctionnalités CraftEd Universe offre-t-il ?",
+      "Comment les établissements d'enseignement peuvent-ils bénéficier de CraftEd Universe ?",
+      "Qu'est-ce qui rend CraftEd Universe adapté aux opérations à grande échelle ?",
+      "Comment CraftEd Universe gère-t-il la prise en charge multi-locataire ?",
+      "Quels sont les avantages d'utiliser CraftEd Universe ?",
+      "Comment CraftEd Universe améliore-t-il l'efficacité ?",
+      "Quels types d'améliorations de performance CraftEd Universe fournit-il ?"
     ],
-    "answer": "CraftEd Universe is a distributed heavy-duty workspace designed for enhanced performance, with potential support for multi-tenants. It is suitable for large-scale educational institutions requiring robust and scalable solutions."
+    "answer": {
+      "en": "CraftEd Universe is a distributed heavy-duty workspace designed for enhanced performance, with potential support for multi-tenants. It is suitable for large-scale educational institutions requiring robust and scalable solutions.",
+      "fr": "CraftEd Universe est un espace de travail distribué robuste conçu pour des performances améliorées, avec un support potentiel pour plusieurs locataires. Il convient aux grandes institutions éducatives nécessitant des solutions robustes et évolutives."
+    }
   },
   {
     "topic": "CraftEd ERP Education Management",
@@ -812,9 +1375,22 @@
       "What kind of student data can be managed with CraftEd ERP?",
       "How does CraftEd ERP support elective and exempted subjects?",
       "What are the key features of CraftEd ERP for education?",
-      "How does CraftEd ERP enhance the management of educational resources?"
+      "How does CraftEd ERP enhance the management of educational resources?",
+      "Comment CraftEd ERP gère-t-il les ressources éducatives ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion de l'éducation ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les étudiants et les enseignants ?",
+      "Comment CraftEd ERP prend-il en charge les différents départements ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion de l'éducation ?",
+      "Comment CraftEd ERP gère-t-il les années et trimestres académiques ?",
+      "Quels types de données étudiantes peuvent être gérés avec CraftEd ERP ?",
+      "Comment CraftEd ERP prend-il en charge les matières facultatives et exemptées ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour l'éducation ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des ressources éducatives ?"
     ],
-    "answer": "CraftEd ERP allows managing education resources like students, teachers, levels & classes, subjects, and academic years/terms. It supports different departments and learning paths, and students can have elective and/or exempted subjects."
+    "answer": {
+      "en": "CraftEd ERP allows managing education resources like students, teachers, levels & classes, subjects, and academic years/terms. It supports different departments and learning paths, and students can have elective and/or exempted subjects.",
+      "fr": "CraftEd ERP permet de gérer des ressources éducatives comme les étudiants, les enseignants, les niveaux et classes, les matières et les années/trimestres académiques. Il prend en charge différents départements et parcours d'apprentissage, et les étudiants peuvent avoir des matières facultatives et/ou exemptées."
+    }
   },
   {
     "topic": "CraftEd ERP Admissions",
@@ -828,9 +1404,22 @@
       "What kind of constraints can be defined in CraftEd ERP for admissions?",
       "How does CraftEd ERP automate email communication for admissions?",
       "What are the key features of CraftEd ERP for admissions?",
-      "How does CraftEd ERP enhance the admission process?"
+      "How does CraftEd ERP enhance the admission process?",
+      "Comment CraftEd ERP gère-t-il les admissions ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des admissions ?",
+      "Pouvez-vous expliquer le processus d'admission dans CraftEd ERP ?",
+      "Comment CraftEd ERP prend-il en charge les formulaires d'admission en ligne ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP gère-t-il les examens des candidatures ?",
+      "Quels types de contraintes peuvent être définis dans CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP automatise-t-il la communication par e-mail pour les admissions ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les admissions ?",
+      "Comment CraftEd ERP améliore-t-il le processus d'admission ?"
     ],
-    "answer": "CraftEd ERP provides an online form with anti-bot protection and an admission dashboard with built-in automated email communication. It allows managing applications with an intuitive UI and defining constraints like minimum age or number of seats."
+    "answer": {
+      "en": "CraftEd ERP provides an online form with anti-bot protection and an admission dashboard with built-in automated email communication. It allows managing applications with an intuitive UI and defining constraints like minimum age or number of seats.",
+      "fr": "CraftEd ERP fournit un formulaire en ligne avec une protection anti-bot et un tableau de bord d'admission avec une communication automatisée par e-mail intégrée. Il permet de gérer les candidatures avec une interface intuitive et de définir des contraintes comme l'âge minimum ou le nombre de places."
+    }
   },
   {
     "topic": "CraftEd ERP Classroom Management",
@@ -844,9 +1433,22 @@
       "What kind of information does CraftEd ERP provide about classrooms?",
       "How does CraftEd ERP enhance classroom organization?",
       "What are the key features of CraftEd ERP for classrooms?",
-      "How does CraftEd ERP improve classroom management?"
+      "How does CraftEd ERP improve classroom management?",
+      "Comment CraftEd ERP gère-t-il les salles de classe ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des salles de classe ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les ressources des salles de classe ?",
+      "Comment CraftEd ERP prend-il en charge la planification des salles de classe ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des salles de classe ?",
+      "Comment CraftEd ERP gère-t-il l'équipement des salles de classe ?",
+      "Quels types d'informations CraftEd ERP fournit-il sur les salles de classe ?",
+      "Comment CraftEd ERP améliore-t-il l'organisation des salles de classe ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les salles de classe ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des salles de classe ?"
     ],
-    "answer": "The Classroom feature in CraftEd ERP allows managing classrooms with information like capacity and equipment. It helps in better planning of teaching by assigning classrooms and managing equipment."
+    "answer": {
+      "en": "The Classroom feature in CraftEd ERP allows managing classrooms with information like capacity and equipment. It helps in better planning of teaching by assigning classrooms and managing equipment.",
+      "fr": "La fonctionnalité Salle de classe dans CraftEd ERP permet de gérer les salles de classe avec des informations comme la capacité et l'équipement. Elle aide à une meilleure planification de l'enseignement en attribuant des salles de classe et en gérant l'équipement."
+    }
   },
   {
     "topic": "CraftEd ERP Timetable Management",
@@ -860,9 +1462,22 @@
       "What kind of notifications does CraftEd ERP provide for timetables?",
       "How does CraftEd ERP enhance timetable planning?",
       "What are the key features of CraftEd ERP for timetables?",
-      "How does CraftEd ERP improve timetable management?"
+      "How does CraftEd ERP improve timetable management?",
+      "Comment CraftEd ERP gère-t-il les emplois du temps ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des emplois du temps ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la planification des sessions ?",
+      "Comment CraftEd ERP prend-il en charge la génération de sessions multiples ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des emplois du temps ?",
+      "Comment CraftEd ERP gère-t-il les conflits de sessions ?",
+      "Quels types de notifications CraftEd ERP fournit-il pour les emplois du temps ?",
+      "Comment CraftEd ERP améliore-t-il la planification des emplois du temps ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les emplois du temps ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des emplois du temps ?"
     ],
-    "answer": "CraftEd ERP provides multisession generation and built-in email notifications for timetable management. It ensures no conflicts between sessions and allows color coding, recurring sessions, and integration with video conferencing tools."
+    "answer": {
+      "en": "CraftEd ERP provides multisession generation and built-in email notifications for timetable management. It ensures no conflicts between sessions and allows color coding, recurring sessions, and integration with video conferencing tools.",
+      "fr": "CraftEd ERP fournit une génération de sessions multiples et des notifications par e-mail intégrées pour la gestion des emplois du temps. Il garantit l'absence de conflits entre les sessions et permet un codage couleur, des sessions récurrentes et une intégration avec des outils de visioconférence."
+    }
   },
   {
     "topic": "CraftEd ERP Attendance Management",
@@ -876,9 +1491,22 @@
       "What kind of flexibility does CraftEd ERP provide for attendance?",
       "How does CraftEd ERP enhance attendance tracking?",
       "What are the key features of CraftEd ERP for attendance?",
-      "How does CraftEd ERP improve attendance management?"
+      "How does CraftEd ERP improve attendance management?",
+      "Comment CraftEd ERP gère-t-il les présences ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des présences ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la présence des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge la présence par code QR ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des présences ?",
+      "Comment CraftEd ERP gère-t-il les rapports de présence ?",
+      "Quel type de flexibilité CraftEd ERP fournit-il pour les présences ?",
+      "Comment CraftEd ERP améliore-t-il le suivi des présences ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les présences ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des présences ?"
     ],
-    "answer": "The Attendance feature in CraftEd ERP provides QR Code attendance for modern learning. It allows taking attendance with flexibility and generating attendance reports."
+    "answer": {
+      "en": "The Attendance feature in CraftEd ERP provides QR Code attendance for modern learning. It allows taking attendance with flexibility and generating attendance reports.",
+      "fr": "La fonctionnalité de présence dans CraftEd ERP fournit une présence par code QR pour un apprentissage moderne. Elle permet de prendre les présences avec flexibilité et de générer des rapports de présence."
+    }
   },
   {
     "topic": "CraftEd ERP Tuition Management",
@@ -892,9 +1520,22 @@
       "What kind of billing contacts does CraftEd ERP support?",
       "How does CraftEd ERP enhance tuition fee management?",
       "What are the key features of CraftEd ERP for tuition?",
-      "How does CraftEd ERP improve tuition management?"
+      "How does CraftEd ERP improve tuition management?",
+      "Comment CraftEd ERP gère-t-il les frais de scolarité ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des frais de scolarité ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère la facturation des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge la facturation basée sur les préférences ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des frais de scolarité ?",
+      "Comment CraftEd ERP gère-t-il le suivi des paiements ?",
+      "Quels types de contacts de facturation CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des frais de scolarité ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les frais de scolarité ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des frais de scolarité ?"
     ],
-    "answer": "CraftEd ERP manages student tuition fees and bills with preference-based invoicing, different billing contacts, and integration with online payment providers like PayPal."
+    "answer": {
+      "en": "CraftEd ERP manages student tuition fees and bills with preference-based invoicing, different billing contacts, and integration with online payment providers like PayPal.",
+      "fr": "CraftEd ERP gère les frais de scolarité et les factures des étudiants avec une facturation basée sur les préférences, différents contacts de facturation et une intégration avec des fournisseurs de paiement en ligne comme PayPal."
+    }
   },
   {
     "topic": "CraftEd ERP Grading Management",
@@ -908,9 +1549,22 @@
       "What kind of grading criteria does CraftEd ERP support?",
       "How does CraftEd ERP enhance grading processes?",
       "What are the key features of CraftEd ERP for grading?",
-      "How does CraftEd ERP improve grading management?"
+      "How does CraftEd ERP improve grading management?",
+      "Comment CraftEd ERP gère-t-il les notes ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des notes ?",
+      "Pouvez-vous expliquer comment CraftEd ERP gère les notes des étudiants ?",
+      "Comment CraftEd ERP prend-il en charge différents systèmes de notation ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des notes ?",
+      "Comment CraftEd ERP gère-t-il les sessions d'examen ?",
+      "Quels types de critères de notation CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il les processus de notation ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les notes ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des notes ?"
     ],
-    "answer": "The Grading feature in CraftEd ERP provides enhanced reporting and supports different grading systems. It allows managing exam sessions, grading criteria, and generating stats and reports."
+    "answer": {
+      "en": "The Grading feature in CraftEd ERP provides enhanced reporting and supports different grading systems. It allows managing exam sessions, grading criteria, and generating stats and reports.",
+      "fr": "La fonctionnalité de notation dans CraftEd ERP fournit des rapports améliorés et prend en charge différents systèmes de notation. Elle permet de gérer les sessions d'examen, les critères de notation et de générer des statistiques et des rapports."
+    }
   },
   {
     "topic": "CraftEd ERP External User Management",
@@ -924,9 +1578,22 @@
       "What kind of identity providers does CraftEd ERP support?",
       "How does CraftEd ERP enhance user management?",
       "What are the key features of CraftEd ERP for external user management?",
-      "How does CraftEd ERP improve external user management?"
+      "How does CraftEd ERP improve external user management?",
+      "Comment CraftEd ERP gère-t-il la gestion des utilisateurs externes ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour la gestion des utilisateurs externes ?",
+      "Pouvez-vous expliquer comment CraftEd ERP s'intègre avec les fournisseurs d'identité ?",
+      "Comment CraftEd ERP prend-il en charge l'authentification unique (SSO) ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour la gestion des utilisateurs externes ?",
+      "Comment CraftEd ERP gère-t-il la création de comptes utilisateurs ?",
+      "Quels types de fournisseurs d'identité CraftEd ERP prend-il en charge ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des utilisateurs ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour la gestion des utilisateurs externes ?",
+      "Comment CraftEd ERP améliore-t-il la gestion des utilisateurs externes ?"
     ],
-    "answer": "The External User Management feature in CraftEd ERP allows creating accounts for students, teachers, and parents directly on identity providers like Google, Microsoft, or AWS. It supports Single Sign-On (SSO) for seamless user access."
+    "answer": {
+      "en": "The External User Management feature in CraftEd ERP allows creating accounts for students, teachers, and parents directly on identity providers like Google, Microsoft, or AWS. It supports Single Sign-On (SSO) for seamless user access.",
+      "fr": "La fonctionnalité de gestion des utilisateurs externes dans CraftEd ERP permet de créer des comptes pour les étudiants, les enseignants et les parents directement sur des fournisseurs d'identité comme Google, Microsoft ou AWS. Elle prend en charge l'authentification unique (SSO) pour un accès utilisateur transparent."
+    }
   },
   {
     "topic": "CraftEd ERP Interoperability with LMS",
@@ -940,9 +1607,22 @@
       "What kind of data can be synced between CraftEd ERP and LMS?",
       "How does CraftEd ERP enhance interoperability with LMS?",
       "What are the key features of CraftEd ERP for LMS integration?",
-      "How does CraftEd ERP improve LMS integration?"
+      "How does CraftEd ERP improve LMS integration?",
+      "Comment CraftEd ERP s'intègre-t-il avec LMS ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour l'intégration LMS ?",
+      "Pouvez-vous expliquer comment CraftEd ERP se synchronise avec LMS ?",
+      "Comment CraftEd ERP prend-il en charge l'intégration transparente des données avec LMS ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP avec LMS ?",
+      "Comment CraftEd ERP gère-t-il la synchronisation des ressources avec LMS ?",
+      "Quels types de données peuvent être synchronisés entre CraftEd ERP et LMS ?",
+      "Comment CraftEd ERP améliore-t-il l'interopérabilité avec LMS ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour l'intégration LMS ?",
+      "Comment CraftEd ERP améliore-t-il l'intégration LMS ?"
     ],
-    "answer": "CraftEd ERP integrates with CraftEd LMS to sync resources like levels, users, classes, subjects, timetable sessions, attendance, and grades for seamless data integration."
+    "answer": {
+      "en": "CraftEd ERP integrates with CraftEd LMS to sync resources like levels, users, classes, subjects, timetable sessions, attendance, and grades for seamless data integration.",
+      "fr": "CraftEd ERP s'intègre avec CraftEd LMS pour synchroniser des ressources comme les niveaux, les utilisateurs, les classes, les matières, les sessions d'emploi du temps, les présences et les notes pour une intégration transparente des données."
+    }
   },
   {
     "topic": "CraftEd ERP User Portal",
@@ -956,9 +1636,22 @@
       "What kind of data can users access through the portal?",
       "How does CraftEd ERP enhance user portal functionality?",
       "What are the key features of CraftEd ERP for user portals?",
-      "How does CraftEd ERP improve user portal access?"
+      "How does CraftEd ERP improve user portal access?",
+      "Comment CraftEd ERP gère-t-il les portails utilisateurs ?",
+      "Quelles fonctionnalités CraftEd ERP offre-t-il pour les portails utilisateurs ?",
+      "Pouvez-vous expliquer comment CraftEd ERP fournit l'accès aux données utilisateurs ?",
+      "Comment CraftEd ERP prend-il en charge l'accès des étudiants et des parents ?",
+      "Quels sont les avantages d'utiliser CraftEd ERP pour les portails utilisateurs ?",
+      "Comment CraftEd ERP gère-t-il les interactions utilisateurs ?",
+      "Quels types de données les utilisateurs peuvent-ils accéder via le portail ?",
+      "Comment CraftEd ERP améliore-t-il la fonctionnalité du portail utilisateur ?",
+      "Quelles sont les principales caractéristiques de CraftEd ERP pour les portails utilisateurs ?",
+      "Comment CraftEd ERP améliore-t-il l'accès au portail utilisateur ?"
     ],
-    "answer": "The User Portal feature in CraftEd ERP gives students and parents access to their data, allowing them to preview attendance, grades, timetables, and invoices, and perform actions like paying bills and updating profiles."
+    "answer": {
+      "en": "The User Portal feature in CraftEd ERP gives students and parents access to their data, allowing them to preview attendance, grades, timetables, and invoices, and perform actions like paying bills and updating profiles.",
+      "fr": "La fonctionnalité Portail utilisateur dans CraftEd ERP donne aux étudiants et aux parents l'accès à leurs données, leur permettant de prévisualiser les présences, les notes, les emplois du temps et les factures, et d'effectuer des actions comme payer des factures et mettre à jour des profils."
+    }
   },
   {
     "topic": "CraftEd LMS Course Management",
@@ -972,344 +1665,21 @@
       "What kind of resources can be managed in CraftEd LMS?",
       "How does CraftEd LMS enhance course customization?",
       "What are the key features of CraftEd LMS for course management?",
-      "How does CraftEd LMS improve course management?"
+      "How does CraftEd LMS improve course management?",
+      "Comment CraftEd LMS gère-t-il les cours ?",
+      "Quelles fonctionnalités CraftEd LMS offre-t-il pour la gestion des cours ?",
+      "Pouvez-vous expliquer comment CraftEd LMS gère la création de cours ?",
+      "Comment CraftEd LMS prend-il en charge divers parcours d'apprentissage ?",
+      "Quels sont les avantages d'utiliser CraftEd LMS pour la gestion des cours ?",
+      "Comment CraftEd LMS gère-t-il les modèles de cours ?",
+      "Quels types de ressources peuvent être gérés dans CraftEd LMS ?",
+      "Comment CraftEd LMS améliore-t-il la personnalisation des cours ?",
+      "Quelles sont les principales caractéristiques de CraftEd LMS pour la gestion des cours ?",
+      "Comment CraftEd LMS améliore-t-il la gestion des cours ?"
     ],
-    "answer": "The Course Management feature in CraftEd LMS allows creating and managing courses tailored to different levels, subjects, or topics. It supports diverse learning paths and enables comprehensive customization of course structures and activities."
-  },
-  {
-    "topic": "CraftEd LMS Activities",
-    "questions": [
-      "How does CraftEd LMS handle activities?",
-      "What features does CraftEd LMS offer for activities?",
-      "Can you explain how CraftEd LMS supports interactive activities?",
-      "How does CraftEd LMS engage students with activities?",
-      "What are the benefits of using CraftEd LMS for activities?",
-      "How does CraftEd LMS handle quizzes and assignments?",
-      "What kind of interactive tools does CraftEd LMS provide?",
-      "How does CraftEd LMS enhance student engagement?",
-      "What are the key features of CraftEd LMS for activities?",
-      "How does CraftEd LMS improve activity management?"
-    ],
-    "answer": "CraftEd LMS supports activities like quizzes, forums, assignments, and workshops to engage students. It also allows incorporating external tools like H5P for interactive content creation."
-  },
-  {
-    "topic": "CraftEd LMS User Management",
-    "questions": [
-      "How does CraftEd LMS manage users?",
-      "What features does CraftEd LMS offer for user management?",
-      "Can you explain how CraftEd LMS handles user roles?",
-      "How does CraftEd LMS support role-based permissions?",
-      "What are the benefits of using CraftEd LMS for user management?",
-      "How does CraftEd LMS handle user accounts?",
-      "What kind of roles can be assigned in CraftEd LMS?",
-      "How does CraftEd LMS enhance user management?",
-      "What are the key features of CraftEd LMS for user management?",
-      "How does CraftEd LMS improve user management?"
-    ],
-    "answer": "CraftEd LMS streamlines user management with detailed role-based permissions. It allows managing user accounts, assigning roles, and tracking user activities."
-  },
-  {
-    "topic": "CraftEd LMS Certification",
-    "questions": [
-      "How does CraftEd LMS handle certifications?",
-      "What features does CraftEd LMS offer for certification?",
-      "Can you explain how CraftEd LMS generates certificates?",
-      "How does CraftEd LMS support automated certification?",
-      "What are the benefits of using CraftEd LMS for certification?",
-      "How does CraftEd LMS handle certificate templates?",
-      "What kind of customization does CraftEd LMS provide for certificates?",
-      "How does CraftEd LMS enhance certification processes?",
-      "What are the key features of CraftEd LMS for certification?",
-      "How does CraftEd LMS improve certification management?"
-    ],
-    "answer": "The Certification feature in CraftEd LMS allows institutes to automate the generation of personalized certificates upon course completion. It supports custom certificate templates and secure access for students to download their certificates."
-  },
-  {
-    "topic": "CraftEd LMS Secure Exams",
-    "questions": [
-      "How does CraftEd LMS ensure secure exams?",
-      "What features does CraftEd LMS offer for secure exams?",
-      "Can you explain how CraftEd LMS protects exam environments?",
-      "How does CraftEd LMS handle exam proctoring?",
-      "What are the benefits of using CraftEd LMS for secure exams?",
-      "How does CraftEd LMS prevent cheating during exams?",
-      "What kind of tools does CraftEd LMS provide for exam security?",
-      "How does CraftEd LMS enhance exam integrity?",
-      "What are the key features of CraftEd LMS for secure exams?",
-      "How does CraftEd LMS improve exam security?"
-    ],
-    "answer": "CraftEd LMS ensures secure exams by restricting browsing and unauthorized actions during online assessments. It supports Safe Exam Browser (SEB) and built-in proctoring tools."
-  },
-  {
-    "topic": "CraftEd LMS Grading",
-    "questions": [
-      "How does CraftEd LMS handle grading?",
-      "What features does CraftEd LMS offer for grading?",
-      "Can you explain how CraftEd LMS manages student grades?",
-      "How does CraftEd LMS support multiple grading systems?",
-      "What are the benefits of using CraftEd LMS for grading?",
-      "How does CraftEd LMS handle grade reports?",
-      "What kind of grading criteria does CraftEd LMS support?",
-      "How does CraftEd LMS enhance grading processes?",
-      "What are the key features of CraftEd LMS for grading?",
-      "How does CraftEd LMS improve grading management?"
-    ],
-    "answer": "The Grading feature in CraftEd LMS simplifies the evaluation process with robust grading tools. It supports multiple grading systems and advanced reporting tools."
-  },
-  {
-    "topic": "CraftEd LMS Progress Analytics",
-    "questions": [
-      "How does CraftEd LMS handle progress analytics?",
-      "What features does CraftEd LMS offer for progress tracking?",
-      "Can you explain how CraftEd LMS tracks learner progress?",
-      "How does CraftEd LMS support decision-making with analytics?",
-      "What are the benefits of using CraftEd LMS for progress analytics?",
-      "How does CraftEd LMS identify struggling learners?",
-      "What kind of dashboards does CraftEd LMS provide?",
-      "How does CraftEd LMS enhance progress tracking?",
-      "What are the key features of CraftEd LMS for progress analytics?",
-      "How does CraftEd LMS improve progress analytics?"
-    ],
-    "answer": "The Progress Analytics feature in CraftEd LMS tracks and visualizes learner progress for improved outcomes. It provides actionable insights to support decision-making and enhance student success."
-  },
-  {
-    "topic": "CraftEd Chat Messaging",
-    "questions": [
-      "How does CraftEd Chat handle messaging?",
-      "What features does CraftEd Chat offer for messaging?",
-      "Can you explain how CraftEd Chat supports real-time communication?",
-      "How does CraftEd Chat facilitate organized discussions?",
-      "What are the benefits of using CraftEd Chat for messaging?",
-      "How does CraftEd Chat handle threaded conversations?",
-      "What kind of channels does CraftEd Chat support?",
-      "How does CraftEd Chat enhance communication?",
-      "What are the key features of CraftEd Chat for messaging?",
-      "How does CraftEd Chat improve messaging?"
-    ],
-    "answer": "CraftEd Chat provides real-time messaging with threaded conversations for organized discussions. It allows creating public and private channels and sending direct messages."
-  },
-  {
-    "topic": "CraftEd Chat File Sharing",
-    "questions": [
-      "How does CraftEd Chat handle file sharing?",
-      "What features does CraftEd Chat offer for file sharing?",
-      "Can you explain how CraftEd Chat supports file uploads?",
-      "How does CraftEd Chat facilitate file collaboration?",
-      "What are the benefits of using CraftEd Chat for file sharing?",
-      "How does CraftEd Chat handle file previews?",
-      "What kind of files can be shared in CraftEd Chat?",
-      "How does CraftEd Chat enhance file sharing?",
-      "What are the key features of CraftEd Chat for file sharing?",
-      "How does CraftEd Chat improve file sharing?"
-    ],
-    "answer": "CraftEd Chat supports instant file uploads with in-message previews for images, documents, and more. It allows organizing shared files with advanced search filters and ensures secure file sharing with end-to-end encryption."
-  },
-  {
-    "topic": "CraftEd Chat Notifications",
-    "questions": [
-      "How does CraftEd Chat handle notifications?",
-      "What features does CraftEd Chat offer for notifications?",
-      "Can you explain how CraftEd Chat manages alerts?",
-      "How does CraftEd Chat support flexible notification settings?",
-      "What are the benefits of using CraftEd Chat for notifications?",
-      "How does CraftEd Chat handle keyword alerts?",
-      "What kind of notification options does CraftEd Chat provide?",
-      "How does CraftEd Chat enhance notification management?",
-      "What are the key features of CraftEd Chat for notifications?",
-      "How does CraftEd Chat improve notifications?"
-    ],
-    "answer": "CraftEd Chat provides flexible notification settings to help manage alerts effectively. It allows customizing notifications for channels, mentions, and direct messages."
-  },
-  {
-    "topic": "CraftEd Chat Search",
-    "questions": [
-      "How does CraftEd Chat handle search?",
-      "What features does CraftEd Chat offer for search?",
-      "Can you explain how CraftEd Chat supports finding information?",
-      "How does CraftEd Chat facilitate advanced search?",
-      "What are the benefits of using CraftEd Chat for search?",
-      "How does CraftEd Chat handle search filters?",
-      "What kind of search tools does CraftEd Chat provide?",
-      "How does CraftEd Chat enhance search functionality?",
-      "What are the key features of CraftEd Chat for search?",
-      "How does CraftEd Chat improve search?"
-    ],
-    "answer": "CraftEd Chat allows finding information faster with robust search tools. It supports advanced search filters, saving frequently used searches, and organizing content with hashtags and pinned posts."
-  },
-  {
-    "topic": "CraftEd Chat Bots",
-    "questions": [
-      "How does CraftEd Chat handle bots?",
-      "What features does CraftEd Chat offer for bots?",
-      "Can you explain how CraftEd Chat supports automation?",
-      "How does CraftEd Chat facilitate third-party integrations?",
-      "What are the benefits of using CraftEd Chat for bots?",
-      "How does CraftEd Chat handle routine tasks?",
-      "What kind of integrations does CraftEd Chat support?",
-      "How does CraftEd Chat enhance automation?",
-      "What are the key features of CraftEd Chat for bots?",
-      "How does CraftEd Chat improve bot functionality?"
-    ],
-    "answer": "CraftEd Chat supports a wide range of integrations to bring tools into one platform. It allows automating routine tasks like reminders, polls, or status updates."
-  },
-  {
-    "topic": "CraftEd Meet Virtual Classrooms",
-    "questions": [
-      "How does CraftEd Meet handle virtual classrooms?",
-      "What features does CraftEd Meet offer for virtual classrooms?",
-      "Can you explain how CraftEd Meet supports online learning?",
-      "How does CraftEd Meet facilitate real-time classes?",
-      "What are the benefits of using CraftEd Meet for virtual classrooms?",
-      "How does CraftEd Meet handle breakout rooms?",
-      "What kind of interactive tools does CraftEd Meet provide?",
-      "How does CraftEd Meet enhance virtual classrooms?",
-      "What are the key features of CraftEd Meet for virtual classrooms?",
-      "How does CraftEd Meet improve virtual classrooms?"
-    ],
-    "answer": "CraftEd Meet creates engaging virtual classrooms with interactive tools. It allows hosting real-time online classes with minimal latency and using breakout rooms for group activities."
-  },
-  {
-    "topic": "CraftEd Meet Recording",
-    "questions": [
-      "How does CraftEd Meet handle recording?",
-      "What features does CraftEd Meet offer for recording?",
-      "Can you explain how CraftEd Meet captures sessions?",
-      "How does CraftEd Meet facilitate playback of recordings?",
-      "What are the benefits of using CraftEd Meet for recording?",
-      "How does CraftEd Meet handle indexed navigation?",
-      "What kind of recording options does CraftEd Meet provide?",
-      "How does CraftEd Meet enhance recording functionality?",
-      "What are the key features of CraftEd Meet for recording?",
-      "How does CraftEd Meet improve recording?"
-    ],
-    "answer": "CraftEd Meet allows recording sessions, including audio, video, chats, and shared content. It provides a built-in playback system and indexed navigation for recordings."
-  },
-  {
-    "topic": "CraftEd Meet Engagement Tools",
-    "questions": [
-      "How does CraftEd Meet handle engagement tools?",
-      "What features does CraftEd Meet offer for engagement?",
-      "Can you explain how CraftEd Meet fosters participation?",
-      "How does CraftEd Meet facilitate real-time feedback?",
-      "What are the benefits of using CraftEd Meet for engagement?",
-      "How does CraftEd Meet handle live polling?",
-      "What kind of interactive tools does CraftEd Meet provide?",
-      "How does CraftEd Meet enhance student engagement?",
-      "What are the key features of CraftEd Meet for engagement?",
-      "How does CraftEd Meet improve engagement?"
-    ],
-    "answer": "CraftEd Meet fosters real-time participation with tools like emojis, live polling, and private or public chats. It enhances student engagement during online sessions."
-  },
-  {
-    "topic": "CraftEd Meet Whiteboard",
-    "questions": [
-      "How does CraftEd Meet handle whiteboards?",
-      "What features does CraftEd Meet offer for whiteboards?",
-      "Can you explain how CraftEd Meet supports visual aids?",
-      "How does CraftEd Meet facilitate collaborative annotations?",
-      "What are the benefits of using CraftEd Meet for whiteboards?",
-      "How does CraftEd Meet handle multi-user mode?",
-      "What kind of tools does CraftEd Meet provide for whiteboards?",
-      "How does CraftEd Meet enhance teaching with whiteboards?",
-      "What are the key features of CraftEd Meet for whiteboards?",
-      "How does CraftEd Meet improve whiteboard functionality?"
-    ],
-    "answer": "CraftEd Meet enhances learning with dynamic visual aids using interactive whiteboards. It allows drawing, highlighting, and writing directly on slides during presentations and supports multi-user mode for collaborative annotations."
-  },
-  {
-    "topic": "CraftEd Meet Captions",
-    "questions": [
-      "How does CraftEd Meet handle captions?",
-      "What features does CraftEd Meet offer for captions?",
-      "Can you explain how CraftEd Meet supports real-time captioning?",
-      "How does CraftEd Meet facilitate accessibility with captions?",
-      "What are the benefits of using CraftEd Meet for captions?",
-      "How does CraftEd Meet handle multiple languages?",
-      "What kind of captioning options does CraftEd Meet provide?",
-      "How does CraftEd Meet enhance accessibility?",
-      "What are the key features of CraftEd Meet for captions?",
-      "How does CraftEd Meet improve captioning?"
-    ],
-    "answer": "CraftEd Meet provides real-time captioning during live sessions using advanced speech-to-text technology. It supports multiple languages and improves inclusivity for hearing-impaired participants and non-native speakers."
-  },
-  {
-    "topic": "CraftEd AI Lessons",
-    "questions": [
-      "How does CraftEd AI handle lessons?",
-      "What features does CraftEd AI offer for lesson creation?",
-      "Can you explain how CraftEd AI generates lessons?",
-      "How does CraftEd AI support tailored lesson content?",
-      "What are the benefits of using CraftEd AI for lessons?",
-      "How does CraftEd AI handle lesson difficulty?",
-      "What kind of lesson structures does CraftEd AI provide?",
-      "How does CraftEd AI enhance lesson creation?",
-      "What are the key features of CraftEd AI for lessons?",
-      "How does CraftEd AI improve lesson generation?"
-    ],
-    "answer": "CraftEd AI generates comprehensive lessons using AI based on course subjects and duration. It includes key concepts, examples, and summaries for effective understanding."
-  },
-  {
-    "topic": "CraftEd AI Quizzes",
-    "questions": [
-      "How does CraftEd AI handle quizzes?",
-      "What features does CraftEd AI offer for quiz creation?",
-      "Can you explain how CraftEd AI generates quizzes?",
-      "How does CraftEd AI support dynamic quiz content?",
-      "What are the benefits of using CraftEd AI for quizzes?",
-      "How does CraftEd AI handle quiz difficulty?",
-      "What kind of quiz formats does CraftEd AI provide?",
-      "How does CraftEd AI enhance quiz creation?",
-      "What are the key features of CraftEd AI for quizzes?",
-      "How does CraftEd AI improve quiz generation?"
-    ],
-    "answer": "CraftEd AI generates dynamic, auto-generated quizzes tailored to lesson content. It allows creating multiple-choice questions and setting difficulty levels."
-  },
-  {
-    "topic": "CraftEd AI Images",
-    "questions": [
-      "How does CraftEd AI handle images?",
-      "What features does CraftEd AI offer for image creation?",
-      "Can you explain how CraftEd AI generates images?",
-      "How does CraftEd AI support visual content for lessons?",
-      "What are the benefits of using CraftEd AI for images?",
-      "How does CraftEd AI handle image customization?",
-      "What kind of image styles does CraftEd AI provide?",
-      "How does CraftEd AI enhance visual content creation?",
-      "What are the key features of CraftEd AI for images?",
-      "How does CraftEd AI improve image generation?"
-    ],
-    "answer": "CraftEd AI generates context-specific images to complement lesson content and courses. It allows creating diagrams, infographics, and illustrations."
-  },
-  {
-    "topic": "CraftEd AI Resources",
-    "questions": [
-      "How does CraftEd AI handle resources?",
-      "What features does CraftEd AI offer for resource generation?",
-      "Can you explain how CraftEd AI generates supplementary materials?",
-      "How does CraftEd AI support curated resources?",
-      "What are the benefits of using CraftEd AI for resources?",
-      "How does CraftEd AI handle external resource recommendations?",
-      "What kind of resources does CraftEd AI provide?",
-      "How does CraftEd AI enhance resource generation?",
-      "What are the key features of CraftEd AI for resources?",
-      "How does CraftEd AI improve resource generation?"
-    ],
-    "answer": "CraftEd AI generates curated supplementary materials for enhanced learning. It suggests external resources like wikis, YouTube videos, and official documentation."
-  },
-  {
-    "topic": "CraftEd AI Standalone",
-    "questions": [
-      "How does CraftEd AI handle standalone access?",
-      "What features does CraftEd AI offer for standalone use?",
-      "Can you explain how CraftEd AI supports independent course creation?",
-      "How does CraftEd AI facilitate end-to-end course generation?",
-      "What are the benefits of using CraftEd AI for standalone access?",
-      "How does CraftEd AI handle single lesson generation?",
-      "What kind of standalone options does CraftEd AI provide?",
-      "How does CraftEd AI enhance standalone functionality?",
-      "What are the key features of CraftEd AI for standalone use?",
-      "How does CraftEd AI improve standalone access?"
-    ],
-    "answer": "CraftEd AI enables direct access to create complete courses with lessons, quizzes, and visuals in one step. It supports generating entire courses end-to-end with a single input."
+    "answer": {
+      "en": "The Course Management feature in CraftEd LMS allows creating and managing courses tailored to different levels, subjects, or topics. It supports diverse learning paths and enables comprehensive customization of course structures and activities.",
+      "fr": "La fonctionnalité de gestion des cours dans CraftEd LMS permet de créer et de gérer des cours adaptés à différents niveaux, matières ou sujets. Elle prend en charge divers parcours d'apprentissage et permet une personnalisation complète des structures de cours et des activités."
+    }
   }
 ]

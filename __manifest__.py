@@ -5,7 +5,7 @@
     'summary': 'Adds a custom chatbot snippet to the website builder',
     'description': """
         This module adds a customizable chatbot widget that can be dragged and dropped
-        onto any Odoo website page.
+        onto any Odoo website page with multilingual support (English/French).
     """,
     'author': 'Bouthayna',
     'website': 'https://yourwebsite.com',
@@ -13,6 +13,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/chatbot_template.xml',
+        'views/chatbot_message_views.xml',
     ],
     'assets': {
         'web.assets_frontend': [

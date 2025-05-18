@@ -1,0 +1,53 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_chatbot_message_tree" model="ir.ui.view">
+        <field name="name">chatbot.message.tree</field>
+        <field name="model">chatbot.message</field>
+        <field name="arch" type="xml">
+            <tree string="Chatbot Messages">
+                <field name="id"/>
+                <field name="request"/>
+                <field name="response"/>
+                <field name="visitor_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_chatbot_message_form" model="ir.ui.view">
+        <field name="name">chatbot.message.form</field>
+        <field name="model">chatbot.message</field>
+        <field name="arch" type="xml">
+            <form string="Chatbot Message">
+                <sheet>
+                    <group>
+                        <field name="request"/>
+                        <field name="response"/>
+                        <field name="visitor_id"/>
+                    </group>
+                    <footer>
+                        <button string="Close" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Window Action -->
+    <record id="action_chatbot_messages" model="ir.actions.act_window">
+        <field name="name">Chatbot Messages</field>
+        <field name="res_model">chatbot.message</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_chatbot_message_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No messages found.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_chatbot_root" name="Chatbot" sequence="10"/>
+    <menuitem id="menu_chatbot_messages" name="Messages" parent="menu_chatbot_root"
+              action="action_chatbot_messages" sequence="10"/>
+</odoo>
